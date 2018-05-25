@@ -68,6 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 body {
 	margin: 0;
+	position: relative;
 }
 
 /**
@@ -235,6 +236,7 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+	border-radius: 0;
 }
 
 /**

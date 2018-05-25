@@ -5,9 +5,10 @@
 
 $lightest: #FFFFFF;
 $darkest: #000000;
-$accent: #004080;
-$blackish: #231f20;
-$hover: #cc0000;
+$green: #75be4b;
+$ltblue: #29b8e9;
+$blue: #243e74;
+$ltgray: #939598;
 
 // ---------------------------------------------------
 //    Shadow
@@ -22,8 +23,10 @@ $med-shadow: 1px 1px 1px rgba(0,0,0,0.35);
 //    Typography
 // ---------------------------------------------------
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
 $font-color: #34435e;
-$robo: 'Roboto', Helvetica, Arial, sans-serif;
+$lato: 'Lato', Helvetica, Arial, sans-serif;
 $fa: 'FontAwesome', sans-serif;
 
 
@@ -32,5 +35,18 @@ $fa: 'FontAwesome', sans-serif;
 // ---------------------------------------------------
 
 
-$transition-fast: all 0.15s ease;
-$transition-medium : all 0.25s ease;
+@mixin transfast() {
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;   
+}
+
+@mixin transmed() {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}

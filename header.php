@@ -21,38 +21,82 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="modal-search-window">
+	<span class="close">&times;</span>
+	<div class="modal-search">
+		<div class="constrain">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
+</div>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dae' ); ?></a>
-
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$dae_description = get_bloginfo( 'description', 'display' );
-			if ( $dae_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $dae_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="upper-header">
+			<div class="constrain flexxed">
+			
+				<div class="uh-left">
+					<?php if ( get_theme_mod( 'theme_company_phone' ) ) :?>
+						<div class="contact-link phone">
+							<a href="tel:<?php echo get_theme_mod( 'theme_company_phone' ); ?>">Call us at <?php echo get_theme_mod( 'theme_company_phone' ); ?></a> 
+						</div>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'theme_company_street' ) ) :?>
+						<div class="contact-link address">
+							<?php echo get_theme_mod( 'theme_company_street' ); ?>, <?php echo get_theme_mod( 'theme_company_state' ); ?>
+						</div>
+					<?php endif; ?>	
+					<?php if ( get_theme_mod( 'theme_company_email' ) ) :?>
+						<div class="contact-link email">
+							<a href="mailto:<?php echo get_theme_mod( 'theme_company_email' ); ?>"><?php echo get_theme_mod( 'theme_company_email' ); ?></a> 
+						</div>
+					<?php endif; ?>
+					<div class="contact-link search">
+						<?php get_search_form(); ?> Search
+					</div>			
+				</div><!-- .uh-left -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dae' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+				<div class="uh-right">
+					<?php social_media_list(); ?>
+					<a href="/wp-admin" class="login">Login</a>
+				</div>
+
+			</div>
+		</div><!-- .upper-header -->
+		<div class="main-header">
+			<div class="constrain flexxed">
+				<div class="site-branding">
+					<a href="/">
+						<div class="site-logo">
+							<img src="<?php echo get_theme_mod( 'theme_logo' ); ?>" />
+						</div>
+					</a>
+				</div><!-- .site-branding -->
+			
+				<?php if ( get_theme_mod( 'theme_company_phone' ) ) :?>
+					<div class="mobile-phone">	
+						<div class="top">Give Us a Call</div>
+						<div class="bottom">
+							<a href="tel:<?php echo get_theme_mod( 'theme_company_phone' ); ?>"><?php echo get_theme_mod( 'theme_company_phone' ); ?></a> 
+						</div>
+					</div>
+				<?php endif; ?>
+				
+
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+					?>
+				</nav><!-- #site-navigation -->
+			</div><!-- .constrain -->
+		</div><!-- .main-header -->
+		<div class="mobile-header">
+			<div class="constrain">
+				<a href="#" class="mobile-search"><i class="fa fa-search" aria-hidden="true"></i></a>
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
