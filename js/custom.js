@@ -4,8 +4,12 @@ jQuery( document ).ready( function( $ ) {
 	$modal = $( '.modal-search-window' ),
 	$modalClose = $( '.modal-search-window .close' ),
 	$mobSearch = $( 'a.mobile-search' ),
-	$dsktpSearch = $( 'a.dsktp-search' );
+	$dsktpSearch = $( 'a.dsktp-search' ),
+	$headerHeight = $( 'header' ).outerHeight(),
+	$siteCont = $( '.site-content' );
 
+
+	$siteCont.css( 'paddingTop', $headerHeight );
 
 	// OPEN/CLOSE MOBILE SEARCH
 	$mobSearch.on( 'click', function( e ){

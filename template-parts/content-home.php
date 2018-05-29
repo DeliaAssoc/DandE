@@ -10,5 +10,5 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	I am here now
+	
 </article><!-- #post-<?php the_ID(); ?> -->

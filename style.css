@@ -399,6 +399,14 @@ template {
   flex-wrap: nowrap;
 }
 
+.p30 {
+  padding: 10px 0;
+}
+
+.p60 {
+  padding: 20px 0;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -408,7 +416,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #6d6f71;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -998,6 +1006,34 @@ object {
   display: block;
 }
 
+.top-footer a {
+  color: #6d6f71;
+}
+
+.footer-id {
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+
+.footer-address {
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+
+.footer-contacts {
+  font-weight: 700;
+}
+.footer-contacts > div {
+  margin: 0 0 3px 0;
+}
+.footer-contacts i {
+  color: #29b8e9;
+  margin: 0 5px 0 0;
+}
+.footer-contacts .get-directions a {
+  color: #75be4b;
+}
+
 @media only screen and (min-width: 568px) {
   button#responsive-menu-button {
     top: 95px !important;
@@ -1009,6 +1045,14 @@ object {
   }
 }
 @media only screen and (min-width: 768px) {
+  .p30 {
+    padding: 20px 0;
+  }
+
+  .p60 {
+    padding: 40px 0;
+  }
+
   button#responsive-menu-button {
     top: 115px !important;
   }
@@ -1162,6 +1206,14 @@ object {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .p30 {
+    padding: 30px 0;
+  }
+
+  .p60 {
+    padding: 60px 0;
+  }
+
   .uh-left {
     width: 80%;
   }

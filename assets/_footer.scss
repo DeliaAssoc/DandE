@@ -1,0 +1,33 @@
+.top-footer {
+
+    a {
+        color: $font-color;
+    }
+}
+
+.footer-id {
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+.footer-address {
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+.footer-contacts {
+    font-weight: 700;
+
+    > div {
+        margin: 0 0 3px 0;
+    }
+
+    i {
+        color: $ltblue;
+        margin: 0 5px 0 0;
+    }
+
+    .get-directions a {
+        color: $green;
+    }
+}
