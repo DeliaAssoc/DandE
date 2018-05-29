@@ -51,13 +51,13 @@
 						</div>
 					<?php endif; ?>
 					<div class="contact-link search">
-						<?php get_search_form(); ?> Search
+						<a href="#" class="dsktp-search">Search</a>
 					</div>			
 				</div><!-- .uh-left -->
 
 				<div class="uh-right">
 					<?php social_media_list(); ?>
-					<a href="/wp-admin" class="login">Login</a>
+					<a href="/wp-admin" class="login">Login <i class="fa fa-caret-down" aria-hidden="true"></i></a>
 				</div>
 
 			</div>

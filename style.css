@@ -413,6 +413,7 @@ textarea {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -697,7 +698,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  min-width: 210px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -755,7 +756,7 @@ a:hover, a:active {
 .modal-search-window {
   background-color: rgba(0, 0, 0, 0.75);
   display: none;
-  height: 100%;
+  height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
@@ -780,6 +781,7 @@ a:hover, a:active {
   position: absolute;
   left: 0;
   margin: 0 auto;
+  max-width: 500px;
   right: 0;
   text-align: center;
   top: 130px;
@@ -804,7 +806,10 @@ a:hover, a:active {
 }
 
 .site-header {
-  padding: 10px 0;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
 }
 
 .upper-header {
@@ -816,6 +821,9 @@ a:hover, a:active {
   color: #FFFFFF;
 }
 
+.main-header {
+  padding: 10px 0;
+}
 .main-header .flexxed {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -827,6 +835,7 @@ a:hover, a:active {
 }
 
 .site-branding {
+  margin: 8px 0 0 0;
   width: 49%;
 }
 
@@ -850,7 +859,6 @@ a:hover, a:active {
 
 .mobile-search {
   color: #243e74;
-  float: right;
   font-size: 24px;
 }
 
@@ -990,6 +998,179 @@ object {
   display: block;
 }
 
+@media only screen and (min-width: 568px) {
+  button#responsive-menu-button {
+    top: 95px !important;
+  }
+}
+@media only screen and (min-width: 640px) {
+  button#responsive-menu-button {
+    top: 105px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  button#responsive-menu-button {
+    top: 115px !important;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .main-header .flexxed {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .site-branding {
+    max-width: 350px;
+    width: 30%;
+  }
+
+  .menu-item-has-children:after {
+    color: #243e74;
+    content: '+';
+    font-weight: 900;
+    position: absolute;
+    right: -12px;
+    top: 0;
+  }
+
+  .main-navigation {
+    width: 67%;
+  }
+  .main-navigation .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sub-menu {
+    background-color: #FFFFFF;
+    padding: 10px !important;
+  }
+  .sub-menu li {
+    padding: 0 0 5px 0;
+  }
+  .sub-menu li:last-of-type {
+    padding: 0;
+  }
+
+  .site-header .social-icon {
+    color: #29b8e9;
+    display: inline-block;
+    width: 15px;
+  }
+  .site-header .fa-caret-down {
+    color: #29b8e9;
+  }
+
+  .upper-header {
+    display: block;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  .uh-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .uh-right {
+    text-align: center;
+  }
+  .uh-right a {
+    margin: 0 3px;
+  }
+  .uh-right a:last-of-type {
+    margin: 0 0 0 3px;
+  }
+
+  .contact-link {
+    display: inline-block;
+    padding: 0 0 0 17px;
+    position: relative;
+  }
+  .contact-link.phone:before {
+    content: '\f095';
+    text-align: center;
+  }
+  .contact-link.address:before {
+    content: '\f041';
+    text-align: right;
+  }
+  .contact-link.email:before {
+    content: '\f0e0';
+    text-align: center;
+  }
+  .contact-link.search:before {
+    content: '\f002';
+  }
+  .contact-link:before {
+    color: #29b8e9;
+    content: '';
+    display: block;
+    font-family: "FontAwesome", sans-serif;
+    height: 20px;
+    left: -3px;
+    position: absolute;
+    width: 15px;
+  }
+
+  .dsktp-search i {
+    color: #29b8e9;
+  }
+
+  .mobile-phone {
+    display: none;
+  }
+
+  .main-navigation {
+    display: block;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .upper-header .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .uh-left {
+    width: 82%;
+  }
+
+  .uh-right a {
+    margin: 0 5px;
+  }
+  .uh-right a:last-of-type {
+    margin: 0 0 0 5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .uh-left {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .uh-left {
+    width: 70%;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

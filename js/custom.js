@@ -3,11 +3,19 @@ jQuery( document ).ready( function( $ ) {
 	// VARIABLES
 	$modal = $( '.modal-search-window' ),
 	$modalClose = $( '.modal-search-window .close' ),
-	$mobSearch = $( 'a.mobile-search' );
+	$mobSearch = $( 'a.mobile-search' ),
+	$dsktpSearch = $( 'a.dsktp-search' );
 
 
 	// OPEN/CLOSE MOBILE SEARCH
 	$mobSearch.on( 'click', function( e ){
+
+		e.preventDefault();
+		$modal.fadeIn();
+
+	});
+
+	$dsktpSearch.on( 'click', function( e ){
 
 		e.preventDefault();
 		$modal.fadeIn();

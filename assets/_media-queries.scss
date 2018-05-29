@@ -1,0 +1,223 @@
+@media only screen and ( min-width: 568px ) {
+
+    // HEADER
+    button#responsive-menu-button {
+        top: 95px !important;
+    }
+}
+
+@media only screen and ( min-width: 640px ) {
+
+    // HEADER
+    button#responsive-menu-button {
+        top: 105px !important;
+    }
+}
+
+@media only screen and ( min-width: 768px ) {
+
+    // HEADER
+    button#responsive-menu-button {
+        top: 115px !important;
+    }
+}
+
+@media only screen and ( min-width: 860px ) {
+
+    // HEADER
+    .main-header {
+
+        .flexxed {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+    }
+
+    .site-branding {
+        max-width: 350px;
+        width: 30%;
+    }
+
+    .menu-item-has-children {
+
+        &:after {
+            color: $blue;
+            content: '+';
+            font-weight: 900;
+            position: absolute;
+            right: -12px;
+            top: 0;
+        }
+    }
+
+    .main-navigation {
+        width: 67%;
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .sub-menu {
+        background-color: $lightest;
+        padding: 10px !important;
+
+        li {
+            padding: 0 0 5px 0;
+
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+    }
+
+    .site-header {
+
+        .social-icon {
+            color: $ltblue;
+            display: inline-block;
+            width: 15px;
+        }
+
+        .fa-caret-down {
+            color: $ltblue;
+        }
+    }
+
+    .upper-header {
+        display: block;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .uh-left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .uh-right {
+        text-align: center;
+
+        a {
+            margin: 0 3px;
+
+            &:last-of-type {
+                margin: 0 0 0 3px;
+            }
+        }
+    }
+
+    .contact-link {
+        display: inline-block;
+        padding: 0 0 0 17px;
+        position: relative;
+
+        &.phone:before {
+            content: '\f095';
+            text-align: center;
+        }
+
+        &.address:before {
+            content: '\f041';
+            text-align: right;
+        }
+
+        &.email:before {
+            content: '\f0e0';
+            text-align: center;
+        }
+
+        &.search:before {
+            content: '\f002';
+        }
+
+        &:before {
+            color: $ltblue;
+            content: '';
+            display: block;
+            font-family: $fa;
+            height: 20px;
+            left: -3px;
+            position: absolute;
+            width: 15px;
+        }
+    }
+
+    .dsktp-search {
+
+        i {
+            color: $ltblue;
+        }
+    }
+
+    .mobile-phone {
+        display: none;
+    }
+
+    .main-navigation {
+        display: block;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+@media only screen and ( min-width: 960px ) {
+
+    // HEADER
+    .upper-header {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .uh-left {
+        width: 82%;
+    }
+
+    .uh-right {
+
+        a {
+            margin: 0 5px;
+
+            &:last-of-type {
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}
+
+@media only screen and ( min-width: 1024px ) {
+
+    // HEADER
+    .uh-left {
+        width: 80%;
+    }
+}
+
+@media only screen and ( min-width: 1200px ) {
+
+    // HEADER
+    .uh-left {
+        width: 70%;
+    }
+}
