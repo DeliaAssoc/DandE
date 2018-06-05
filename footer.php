@@ -39,18 +39,29 @@
 							<a href="mailto:<?php echo get_theme_mod( 'theme_company_email' ); ?>"><i class="fa fa-envelope" aria-hidden="true"></i> Email: <?php echo get_theme_mod( 'theme_company_email' ); ?></a>
 						</div>
 						<div class="get-directions">
-							<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i> Get Directions</a>
+							<a target="_blank" href="https://goo.gl/maps/ViLQa3jZ6DR2"><i class="fa fa-map-marker" aria-hidden="true"></i> Get Directions</a>
 						</div>
 					</div>
 				</div>
 				<div class="footer-links">
-
+					<?php if ( is_active_sidebar( 'footer_menu' ) ) : ?>
+						<div class="footer-menu">
+							<?php dynamic_sidebar( 'footer_menu' ); ?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
 		<div class="bottom-footer">
 			<div class="constrain flexxed">
-
+				<div class="bf-left">
+					<a href="" class="terms">Terms + Conditions</a>
+					<a href="" class="privacy">Privacy Policy</a>
+					<div class="copy">&copy;<?php echo date( 'Y' ); ?> <?php echo get_bloginfo( 'name' ); ?>. All rights reserved.</div>
+				</div>
+				<div class="bf-right">
+					<?php social_media_list(); ?>
+				</div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

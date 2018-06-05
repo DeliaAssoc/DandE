@@ -3,6 +3,148 @@
 # Content
 --------------------------------------------------------------*/
 
+// HOMEPAGE
+.slide {
+	background-color: #ebebeb;
+	text-align: center;
+}
+
+.slide-content {
+	color: $blue;
+	padding: 10px 0;
+}
+
+.slide-btns {
+
+	&.flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: space-evenly;
+		    -ms-flex-pack: space-evenly;
+		        justify-content: space-evenly;
+	}
+
+	.fa {
+		color: $green;
+	}
+}
+
+.intro-content {
+
+	.mcontent-block {
+		margin: 0 0 15px 0;
+	}
+}
+
+.possibilities {
+	background-color: #ebebeb;
+	text-align: center;
+
+	.full {
+		margin: 0 0 15px 0;
+	}
+}
+
+.pos-item {
+	margin: 0 0 30px 0;
+	position: relative;
+	z-index: 50;
+
+	&:after {
+		background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/Plus-Icon.png' );
+		background-position: center center;
+		background-repeat: no-repeat;
+		bottom: -40px;
+		content: '';
+		display: block;
+		height: 90px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		width: 90px;
+		z-index: -1;
+	}
+
+	&:last-of-type {
+		margin: 0;
+
+		&:after {
+			background-image: none;
+		}
+	}
+}
+
+.pos-icon {
+	background-color: $lightest;
+	border-radius: 100%;
+	height: 100px;
+	margin: 0 auto 15px auto;
+	padding: 20px;
+	width: 100px;
+}
+
+.pos-text {
+	margin: 0 0 10px 0;
+}
+
+.pos-link {
+	color: $dkgray;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.benefits {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.benefit-items {
+	margin: 15px 0 0 0;
+}
+
+ol.bennies {
+	counter-reset:li;
+	margin-left:0;
+	padding-left:0; /* Remove the default left padding */
+}
+
+ol.bennies > li {
+	position:relative; /* Create a positioning context */
+	list-style:none; /* Disable the normal item numbering */
+	margin: 0 0 15px 0;
+	z-index: 99;
+}
+
+ol.bennies > li:before {
+	content:counter(li, decimal-leading-zero); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	color: rgba( $blue, .35 );
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1em;
+	position:absolute;
+	top: -7px;
+	z-index: 50;
+}
+
+.bennies {
+	position: relative;
+
+	.title {
+		font-size: 20px;
+		font-weight: 900;
+		margin: 0 0 0 35px;
+		position: relative;
+		z-index: 100;
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Posts and pages

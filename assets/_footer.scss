@@ -3,6 +3,21 @@
     a {
         color: $font-color;
     }
+
+    .menu-item-has-children {
+
+        &:after {
+            content: '';
+        }
+    }
+
+    .sub-menu {
+        padding: 0 !important;
+    }
+}
+
+.footer-ident {
+    margin: 0 0 20px 0;
 }
 
 .footer-id {
@@ -29,5 +44,59 @@
 
     .get-directions a {
         color: $green;
+    }
+}
+
+.footer-menu li {
+    font-weight: 700;
+
+    &.menu-item-has-children {
+        margin: 0 0 5px 0;
+    }
+
+    a {
+        color: $blue;
+    }
+}
+
+.footer-menu .sub-menu {
+    margin: 0 0 5px 0;
+    
+    li {
+        font-weight: 500;
+    }
+
+    a {
+        color: $font-color;
+    }
+}
+
+.bottom-footer {
+    background-color: $green;
+    color: $lightest;
+    font-size: 15px;
+    padding: 5px 0;
+    text-align: center;
+
+    a {
+        color: $lightest;
+
+        &.terms {
+
+            &:after {
+                color: $blue;
+                content: '|';
+                margin: 0 7px;
+            }
+        }
+    }
+
+    .bf-left {
+        margin: 0 0 10px 0;
+    }
+
+    a.social-icon {
+        color: $blue;
+        margin: 0 5px;
     }
 }

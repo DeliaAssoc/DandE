@@ -1,15 +1,14 @@
-jQuery( document ).ready( function( $ ) {
+$( document ).ready( function() {
 
 	// VARIABLES
 	$modal = $( '.modal-search-window' ),
 	$modalClose = $( '.modal-search-window .close' ),
 	$mobSearch = $( 'a.mobile-search' ),
 	$dsktpSearch = $( 'a.dsktp-search' ),
-	$headerHeight = $( 'header' ).outerHeight(),
-	$siteCont = $( '.site-content' );
+	$headerHeight = $( '.site-header' ).height(),
+	$siteCont = $( '.content-area' );
 
-
-	$siteCont.css( 'paddingTop', $headerHeight );
+	$siteCont.css( 'paddingTop', $headerHeight - 5 );
 
 	// OPEN/CLOSE MOBILE SEARCH
 	$mobSearch.on( 'click', function( e ){
@@ -26,11 +25,11 @@ jQuery( document ).ready( function( $ ) {
 
 	});
 
-	( $modal || $modalClose ).on( 'click', function( e ){
+	( $modalClose ).on( 'click', function( e ){
 		$modal.fadeOut();
 	});
 
-	// Open search form
+	// OPEN SEARCH FORM
 	$( 'a.search' ).on( 'click', function( e ){
 
 			e.preventDefault();
@@ -42,6 +41,21 @@ jQuery( document ).ready( function( $ ) {
 			}
 	});
 
+	// DEFAULT PAGE SLIDER
+	$( '.hero-slider' ).slick({
+		arrows: false
+	});
+
+	// CLIENT MODULE SLIDER
+	$( '.client-slider' ).slick({
+		arrows: false
+	});
+
+	// TESTIMONIALS MODULE SLIDER
+	$( '.testimonial-slider' ).slick({
+		arrows: false,
+		dots: true
+	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
 	$('a[href*="#"]:not([href="#"])').click(function() {

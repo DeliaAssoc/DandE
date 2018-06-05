@@ -99,22 +99,24 @@ function dae_content_width() {
 add_action( 'after_setup_theme', 'dae_content_width', 0 );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * Widget Sidebars.
  */
-function dae_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'dae' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'dae' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+function dae_sidebars() {
+
+	$args = array(
+		'id'            => 'footer_menu',
+		'class'         => 'footer-menu',
+		'name'          => __( 'Footer Menu Area', 'text_domain' ),
+		'description'   => __( 'Right side of main footer area', 'text_domain' ),
+		'before_title'  => ' ',
+		'after_title'   => ' ',
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
 }
-add_action( 'widgets_init', 'dae_widgets_init' );
+add_action( 'widgets_init', 'dae_sidebars' );
 
 /**
  * Enqueue scripts and styles.
@@ -175,3 +177,37 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Hide admin Bar
  */
 show_admin_bar(false);
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Contact Section Module',
+		'menu_title'	=> 'Contact Section Module',
+		'menu_slug' 	=> 'contact-section-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-email-alt',
+		'position'		=> 15
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Client Slider Options',
+		'menu_title'	=> 'Client Slider Options',
+		'menu_slug' 	=> 'client-slider-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-id',
+		'position'		=> 6
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Testimonials Slider Options',
+		'menu_title'	=> 'Testimonials Slider Options',
+		'menu_slug' 	=> 'testimonials-slider-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-testimonial',
+		'position'		=> 8
+	));
+
+}
