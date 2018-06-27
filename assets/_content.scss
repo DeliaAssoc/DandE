@@ -4,6 +4,16 @@
 --------------------------------------------------------------*/
 
 // HOMEPAGE
+.hero-slider {
+
+	.slide {
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
 .slide {
 	background-color: #ebebeb;
 	text-align: center;
@@ -15,15 +25,18 @@
 }
 
 .slide-btns {
+	max-width: 350px;
+	margin: 0 auto;
+	text-transform: uppercase;
 
 	&.flexxed {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
 		        flex-direction: row;
-		-webkit-box-pack: space-evenly;
-		    -ms-flex-pack: space-evenly;
-		        justify-content: space-evenly;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 	}
 
 	.fa {
@@ -32,6 +45,9 @@
 }
 
 .intro-content {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/main-content-background-image.png' );
+	background-position: top center;
+	background-repeat: no-repeat;
 
 	.mcontent-block {
 		margin: 0 0 15px 0;
@@ -43,7 +59,8 @@
 	text-align: center;
 
 	.full {
-		margin: 0 0 15px 0;
+		margin: 0 auto 15px auto;
+		max-width: 900px;
 	}
 }
 
@@ -78,12 +95,12 @@
 }
 
 .pos-icon {
-	background-color: $lightest;
-	border-radius: 100%;
-	height: 100px;
-	margin: 0 auto 15px auto;
-	padding: 20px;
-	width: 100px;
+    background-color: $lightest;
+    border-radius: 100%;
+    height: 110px;
+    margin: 0 auto 15px auto;
+    padding: 29px;
+    width: 110px;
 }
 
 .pos-text {
@@ -144,7 +161,6 @@ ol.bennies > li:before {
 		z-index: 100;
 	}
 }
-
 
 /*--------------------------------------------------------------
 ## Posts and pages

@@ -2,6 +2,23 @@
 
     .site {
         min-height: auto;
-        height: 100vh;
+        // height: 100vh;
+    }
+
+    .site {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 100vh;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    .site-content {
+        -webkit-box-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+                flex:  0 1 auto;
     }
 }

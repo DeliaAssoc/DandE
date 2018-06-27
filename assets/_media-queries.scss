@@ -1,8 +1,37 @@
 @media only screen and ( min-width: 568px ) {
 
+    // CLASSES
+    .p30 {
+        padding: 15px 0;
+    }
+
+    .p60 {
+        padding: 30px 0;
+    }
+
     // HEADER
     button#responsive-menu-button {
         top: 95px !important;
+    }
+
+    // HOMEPAGE
+    .slide-content {
+        padding: 20px 0;
+    }
+
+    .mcontent-block {
+        margin: 0 0 20px 0;
+    }
+
+    .pos-item {
+        margin: 0 0 45px 0;
+    }
+
+    .recent-blogs {
+
+        .post-block {
+            margin: 0 0 30px 0;
+        }
     }
 }
 
@@ -25,9 +54,155 @@
         padding: 40px 0;
     }
 
+    // TYPOGRAPHY
+    h2 {
+       font-size: 30px; 
+    }
+
+    // MODULES
+    .recent-blogs {
+        
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .posts-2 {
+            width: 48%;
+        }
+
+        .posts-3 {
+            width: 31%;
+        }
+    }
+
+    .contact-module {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .half {
+            width: 50%;
+        }
+
+        .right-half {
+            position: relative;
+        }
+
+        .constrain {
+            padding: 0 20px;
+        }
+
+        .side-content {
+            left: 0;
+            margin: 0 auto;
+            max-width: 600px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY( -50% );
+            width: auto;
+        }
+    }
+
     // HEADER
     button#responsive-menu-button {
         top: 115px !important;
+    }
+
+    // HOMEPAGE
+    .hero-slider {
+        
+        .slide {
+            position: relative;
+        }
+
+        .slide-content {
+            color: $lightest;
+            left: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY( -50% );
+        }
+
+        .text-content {
+            margin: 0 0 20px 0;
+        }
+
+        h2 {
+            color: $lightest;
+            font-size: 40px;
+        }
+    }
+
+    .intro-content,
+    .benefits {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .half {
+            width: 48%;
+        }
+    }
+
+    .intro-content {
+        background-position: center 40px;
+    }
+
+    .benefits {
+
+        .half {
+            width: 50%;
+        }
+
+        .section-image {
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                max-width: none;
+                width: auto;
+            }
+        }
+
+        .constrain {
+            padding: 0 20px;
+        }
+    }
+
+
+    .slide {
+        background-color: transparent;
+    }
+
+    .client-slider-module {
+
+        .full {
+            margin: 0 0 10px 0;
+            overflow: hidden;
+        }
     }
 
     // FOOTER
@@ -278,6 +453,85 @@
             }
         }
     }
+
+    // MODULES
+    .client-slider-module {
+    
+        .full {
+            margin: 0 auto 30px auto;
+            max-width: 900px;
+        }
+
+        .client-slide {
+            padding: 0 20px;
+        }
+    }
+
+    .contact-module {
+
+        .constrain {
+            padding: 0 30px;
+        }
+
+        .left-half {
+            
+            .constrain {
+                float: right;
+                max-width: 600px;
+            }
+        }
+    }
+
+    // HOMEPAGE
+    .possibilities {
+
+        .full {
+            margin: 0 auto 30px auto;
+        }
+    }
+
+    .pos-item {
+        margin: 0;
+    }
+
+    .pos-items {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                    justify-content: space-between;
+        }
+
+        .pitems-3 {
+            width: 30%;
+        }
+
+        .pitems-4 {
+            width: 48%;
+        }
+    }
+
+    .pos-item {
+        
+        &:after {
+            left: initial;
+            right: -65px;
+            top: 5px;
+        }
+    }
+
+    .benefits {
+
+        .constrain {
+            padding: 0 30px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -296,6 +550,15 @@
         width: 80%;
     }
 
+    // HOMEPAGE
+    .slide-btns {
+        margin: 30px auto 0;
+    }
+
+    .intro-content {
+        background-position: center 60px;
+    }
+
     // FOOTER
     .footer-ident {
         width: 50%;   
@@ -312,8 +575,73 @@
 
 @media only screen and ( min-width: 1200px ) {
 
+    // MODULES
+    .contact-module {
+
+        .side-content {
+            right: initial;
+            width: 600px;
+        }
+    }
+
     // HEADER
     .uh-left {
         width: 70%;
+    }
+
+    // HOMEPAGE
+    .benefits {
+
+        .section-image {
+
+            img {
+                height: 100%;
+                max-width: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and ( min-width: 1220px ) {
+
+    // MODULES
+    .contact-module {
+
+        .left-half {
+
+            .constrain {
+                margin: initial;
+                padding: 0 65px 0 0;
+            }
+        }
+    }
+
+    // HOMEPAGE
+    .benefits {
+
+        .side-content {
+            float: left;
+            padding: 0 0 0 65px;
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1440px ) {
+
+    // HOMEPAGE
+    .hero-slider {
+
+        .slide-content {
+
+            p {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 55px;
+            }
+        }
     }
 }

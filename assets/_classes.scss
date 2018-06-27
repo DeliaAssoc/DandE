@@ -36,6 +36,10 @@
 	    flex-wrap: nowrap;
 }
 
+section {
+	overflow: hidden;
+}
+
 .p30 {
 	padding: 10px 0;
 }
@@ -211,7 +215,7 @@
 			&:before {
 				content: '\f111';
 				color: $lightest;
-				font-family: $fa;
+				font-family: $fa5;
 				font-size: 12px;
 				opacity: 1;
 			}
@@ -219,8 +223,22 @@
 	}
 }
 
+.tslide-content {
+	display: block;
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.testimonial-name {
+	margin: 30px 0 0 0;
+}
+
 // RECENT BLOGS MODULE
 .recent-blogs {
+
+	.full {
+		margin: 0 0 20px 0;
+	}
 
 	.post-block {
 		margin: 0 0 20px 0;
@@ -239,8 +257,10 @@
 
 	.post-link {
 		color: $ltblue;
+		display: inline-block;
 		font-size: 14px;
 		font-weight: 500;
+		margin: 10px 0 0 0;
 		text-transform: uppercase;
 	}
 }
@@ -267,6 +287,12 @@
 			font-size: 32px;
 			font-weight: 500;
 		}
+	}
+
+	input[ type=submit ] {
+		color: $blue;
+		padding: 15px 25px;
+		text-transform: uppercase;
 	}
 }
 

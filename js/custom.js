@@ -48,7 +48,26 @@ $( document ).ready( function() {
 
 	// CLIENT MODULE SLIDER
 	$( '.client-slider' ).slick({
-		arrows: false
+		slidesToShow: 4,
+		slideToScroll: 4,
+		responsive: [
+			{
+				breakpoint: 959,
+				settings: {
+					slidesToShow: 2,
+					slideToScroll: 2,
+					arrows: false
+				}
+			},
+			{
+				breakpoint: 567,
+				settings: {
+					slidesToShow: 1,
+					slideToScroll: 1,
+					arrows: false
+				}
+			}
+		]
 	});
 
 	// TESTIMONIALS MODULE SLIDER

@@ -19,8 +19,8 @@
                     <div class="slide">
                         <?php $image = get_sub_field( 'slide_image' ); ?>
                         <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
-                        <div class="constrain">
-                            <div class="slide-content">
+                        <div class="slide-content">
+                            <div class="constrain">
                                 <div class="text-content">
                                     <?php the_sub_field( 'slide_content' ); ?>
                                 </div>
@@ -32,8 +32,9 @@
                                         <a class="btn-md white-brdr" href="<?php the_sub_field( 'slide_button_2_link' ); ?>"><?php the_sub_field( 'slide_button_2_text' ); ?></a>
                                     <?php endif; ?>      
                                 </div>
-                            </div>
-                        </div><!-- .constrain -->
+                            </div><!-- .constrain -->
+                        </div>
+                        
                     </div>
 
                 <?php endwhile; ?>
@@ -71,7 +72,7 @@
                 <?php if ( have_rows( 'possibilities_items' ) ) : ?>
                     <?php $pCount = count( get_field( 'possibilities_items' ) ); ?>
                     <?php while ( have_rows( 'possibilities_items' ) ) : the_row(); ?>
-                        <div class="pos-item pItems-<?php echo $pCount; ?>">
+                        <div class="pos-item pitems-<?php echo $pCount; ?>">
                             <?php $pImage = get_sub_field( 'item_icon' ); ?>
                             <div class="pos-icon">
                                 <img src="<?php echo $pImage[ 'url' ]; ?>" alt="<?php echo $pImage[ 'alt' ]; ?>">
@@ -87,36 +88,38 @@
         </div>
     </section><!-- .possibilities -->
 
-    <section class="benefits flexxed">
-        <div class="half">
-            <?php $bImage = get_field( 'benefits_image' ); ?>
-            <img style="display: block;" src="<?php echo $bImage[ 'url' ]; ?>" alt="<?php echo $bImage[ 'alt' ]; ?>">
-        </div>
-        <div class="half ltblue-bg p60 ">
-            <div class="constrain">
-                <div class="subtitle white">
-                    <?php the_field( 'benefits_subtitle' ); ?>
-                </div>
-                    <?php the_field( 'benefits_content' ); ?>
-                    <div class="benefit-items flexxed">
-                        <?php if ( have_rows( 'benefits_items' ) ) : ?>
-                            <ol class="bennies">
-                            <?php while ( have_rows( 'benefits_items' ) ) : the_row(); ?>
-                                <li>
-                                    <div class="title"><?php the_sub_field( 'item_title' ); ?></div>
-                                    <div class="item-content"><?php the_sub_field( 'item_content' ); ?></div>
-                                </li>
-                            <?php endwhile; ?>
-                            </ol>
-                        <?php endif; ?>
+    <section class="benefits">
+        <div class="flexxed">
+            <div class="half section-image">
+                <?php $bImage = get_field( 'benefits_image' ); ?>
+                <img style="display: block;" src="<?php echo $bImage[ 'url' ]; ?>" alt="<?php echo $bImage[ 'alt' ]; ?>">
+            </div>
+            <div class="half ltblue-bg p60">
+                <div class="constrain side-content">
+                    <div class="subtitle white">
+                        <?php the_field( 'benefits_subtitle' ); ?>
                     </div>
-                </div>
-            </div><!-- .constrain -->
+                        <?php the_field( 'benefits_content' ); ?>
+                        <div class="benefit-items flexxed">
+                            <?php if ( have_rows( 'benefits_items' ) ) : ?>
+                                <ol class="bennies">
+                                <?php while ( have_rows( 'benefits_items' ) ) : the_row(); ?>
+                                    <li>
+                                        <div class="title"><?php the_sub_field( 'item_title' ); ?></div>
+                                        <div class="item-content"><?php the_sub_field( 'item_content' ); ?></div>
+                                    </li>
+                                <?php endwhile; ?>
+                                </ol>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div><!-- .constrain -->
+            </div>
         </div>
     </section><!-- .benefits -->
 
     <?php if ( get_field( 'client_slider_option' ) == 'yes' ) : ?>
-        <section class="client-slider-module p30">
+        <section class="client-slider-module p60">
             <div class="constrain">
                 <div class="full">
                     <div class="subtitle noline">
@@ -177,9 +180,11 @@
                         if ( $tQuery->have_posts() ) {
                             while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
                                 <div class="testimonial-slide">
-                                    <?php the_content(); ?>
-                                    <div class="testimonail-name">
-                                        - <?php the_title(); ?>
+                                    <div class="tslide-content">
+                                        <?php the_content(); ?>
+                                        <div class="testimonial-name">
+                                            - <?php the_title(); ?>
+                                        </div>
                                     </div>
                                 </div><!-- .testimonial-slide -->
                             <?php endwhile; ?>
@@ -194,7 +199,13 @@
     <?php endif; ?>
 
     <?php if ( get_field( 'recent_blog_option' ) == 'yes' ) : ?>
-        <section class="recent-blogs p30">
+        <section class="recent-blogs p60">
+            <div class="constrain">
+                <div class="full">
+                    <div class="subtitle"><?php the_field( 'recent_post_module_subtitle', 'option' ); ?></div>
+                    <div class="text-content"><?php the_field( 'recent_post_module_content', 'option' ); ?></div>
+                </div>
+            </div>
             <div class="constrain flexxed">
 
                 <?php
@@ -248,7 +259,9 @@
                 </div>
             </div>
             <div class="half right-half p60" style="background-image: url( '<?php the_field( 'contact_side_background_image', 'option' ); ?>' );">
-                <?php the_field( 'contact_side_content', 'option' ); ?>
+                <div class="side-content">
+                    <?php the_field( 'contact_side_content', 'option' ); ?>
+                </div>
             </div>
         </section><!-- .contact-module -->
     <?php endif; ?>
