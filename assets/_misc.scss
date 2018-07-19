@@ -104,3 +104,17 @@
 .widget select {
 	max-width: 100%;
 }
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+	background-color: #fafcff;
+	display: none;
+
+	.current-item {
+		color: $dkgray;
+		cursor: default;
+		font-weight: 900;
+	}
+}

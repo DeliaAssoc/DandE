@@ -1,0 +1,36 @@
+*.DS_store
+.DS_store?
+
+############
+## Misc
+############
+
+node_modules/*
+
+bin/
+tmp/
+temp/
+._*
+.Trashes
+
+.svn
+
+*.codekit
+*.scssc
+
+############
+## Theme Build
+############
+ 
+.npm-debug.log 
+.sass-cache
+
+
+############
+## Wordpress
+############
+
+plugins/
+uploads/
+wp-content/upgrade/
+*.log

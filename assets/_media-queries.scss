@@ -9,6 +9,12 @@
         padding: 30px 0;
     }
 
+    // MISC
+    .breadcrumbs {
+        display: block;
+        padding: 15px 0 10px;
+    }
+
     // HEADER
     button#responsive-menu-button {
         top: 95px !important;
@@ -120,6 +126,40 @@
     // HEADER
     button#responsive-menu-button {
         top: 115px !important;
+    }
+
+    .secondary-intro-content {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .intro-content-text {
+            margin: 0;
+            width: 47.5%;
+        }
+
+        .intro-content-image {
+            overflow: hidden;
+            position: relative;
+            width: 48%;
+
+            img {
+                height: 100%;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                max-width: initial;
+
+            }
+        }
     }
 
     // HOMEPAGE
