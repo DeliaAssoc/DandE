@@ -169,6 +169,23 @@ ol.bennies > li:before {
 	}
 }
 
+// MODULES TEMPLATE
+.module {
+
+	.module-intro {
+		margin: 0 auto 30px auto;
+		max-width: 800px;
+	}
+
+	.mc-item {
+		margin: 0 0 10px 0;
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

@@ -100,12 +100,28 @@ section {
 	background-color: $green;
 }
 
+.module.green-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
 .green-brdr {
 	border: 2px solid $green;
 }
 
 .blue-bg {
 	background-color: $blue;
+}
+
+.module.blue-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
 }
 
 .blue-brdr {
@@ -116,13 +132,42 @@ section {
 	background-color: $ltblue;
 }
 
+.module.ltblue-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
 .ltblue-brdr {
 	border: 2px solid $ltblue;
+}
+
+.ltgray-bg {
+	background-color: #ebebeb;
+}
+
+.ltgray-brdr {
+	border: 2px solid #ebebeb;
+}
+
+.dkgray-bg {
+	background-color: $dkgray;
+}
+
+.module.dkgray-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
 }
 
 .dkgray-text {
 	color: $dkgray;
 }
+
 
 .subtitle {
 	color: $ltblue;

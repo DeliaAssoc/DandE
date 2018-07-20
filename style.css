@@ -476,12 +476,26 @@ section {
   background-color: #75be4b;
 }
 
+.module.green-bg {
+  color: #FFFFFF;
+}
+.module.green-bg h2 {
+  color: #FFFFFF;
+}
+
 .green-brdr {
   border: 2px solid #75be4b;
 }
 
 .blue-bg {
   background-color: #243e74;
+}
+
+.module.blue-bg {
+  color: #FFFFFF;
+}
+.module.blue-bg h2 {
+  color: #FFFFFF;
 }
 
 .blue-brdr {
@@ -492,8 +506,34 @@ section {
   background-color: #29b8e9;
 }
 
+.module.ltblue-bg {
+  color: #FFFFFF;
+}
+.module.ltblue-bg h2 {
+  color: #FFFFFF;
+}
+
 .ltblue-brdr {
   border: 2px solid #29b8e9;
+}
+
+.ltgray-bg {
+  background-color: #ebebeb;
+}
+
+.ltgray-brdr {
+  border: 2px solid #ebebeb;
+}
+
+.dkgray-bg {
+  background-color: #6d6f71;
+}
+
+.module.dkgray-bg {
+  color: #FFFFFF;
+}
+.module.dkgray-bg h2 {
+  color: #FFFFFF;
 }
 
 .dkgray-text {
@@ -1525,6 +1565,17 @@ ol.bennies > li:before {
   margin: 0 0 10px 0;
 }
 
+.module .module-intro {
+  margin: 0 auto 30px auto;
+  max-width: 800px;
+}
+.module .mc-item {
+  margin: 0 0 10px 0;
+}
+.module .mc-item:last-of-type {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1772,6 +1823,21 @@ object {
   .recent-blogs .post-block {
     margin: 0 0 30px 0;
   }
+
+  .module .module-content.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .module .module-content .mc-item.half {
+    width: 47.5%;
+  }
 }
 @media only screen and (min-width: 640px) {
   button#responsive-menu-button {
@@ -1928,6 +1994,13 @@ object {
   .client-slider-module .full {
     margin: 0 0 10px 0;
     overflow: hidden;
+  }
+
+  .module .module-content .mc-item.one-third {
+    width: 30%;
+  }
+  .module .module-content .mc-item.two-thirds {
+    width: 64%;
   }
 
   .top-footer .flexxed {

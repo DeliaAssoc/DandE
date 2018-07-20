@@ -39,6 +39,29 @@
             margin: 0 0 30px 0;
         }
     }
+
+    // MODULES TEMPLATE
+    .module {
+
+        .module-content {
+
+            &.flexxed {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+            }
+
+            .mc-item.half {
+                width: 47.5%;
+            }
+        }
+    }
 }
 
 @media only screen and ( min-width: 640px ) {
@@ -242,6 +265,21 @@
         .full {
             margin: 0 0 10px 0;
             overflow: hidden;
+        }
+    }
+
+    // MODULES TEMPLATE
+    .module {
+
+        .module-content {
+
+            .mc-item.one-third {
+                width: 30%;
+            }
+
+            .mc-item.two-thirds {
+                width: 64%;
+            }
         }
     }
 
