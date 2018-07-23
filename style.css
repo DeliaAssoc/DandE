@@ -1009,13 +1009,13 @@ big {
 
 /* Just for funs and it looks cool */
 ::-moz-selection {
-  background: #e21a22;
+  background: #5094b5;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #e21a22;
+  background: #5094b5;
   color: #fff;
   text-shadow: none;
 }
@@ -1565,6 +1565,102 @@ ol.bennies > li:before {
   margin: 0 0 10px 0;
 }
 
+.team-block {
+  background-color: #FFFFFF;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.team-block .team-bio-block {
+  background-color: #ebebeb;
+  border-bottom: 10px solid #75be4b;
+  border-top: 10px solid #75be4b;
+  -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+}
+.team-block .team-bio-block.active {
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  visibility: visible;
+}
+.team-block .team-bio-block .bio {
+  margin: 10px 0 0 0;
+}
+.team-block .team-main-info {
+  padding: 115px 0;
+  text-align: center;
+}
+.team-block h3 {
+  color: #231f20;
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 0 3px 0;
+}
+.team-block .close-bio {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+.team-block .job-title {
+  color: #939598;
+  font-style: italic;
+  font-weight: 700;
+}
+.team-block .team-image {
+  background-color: #75be4b;
+  border-radius: 50%;
+  display: inline-block;
+  height: 175px;
+  margin: 0 0 15px 0;
+  width: 175px;
+}
+.team-block .team-contact-block {
+  border-top: 1px solid #ebebeb;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+}
+.team-block .team-contact-block .contact-item {
+  color: #231f20;
+  margin: 0 0 5px 0;
+}
+.team-block .team-contact-block .contact-item a {
+  color: #231f20;
+}
+.team-block .team-contact-block .fa {
+  color: #75be4b;
+}
+.team-block .team-contact-block .team-linkedin {
+  background-color: #75be4b;
+  display: inline-block;
+  height: 30px;
+  padding: 4px 0 0 0;
+  text-align: center;
+  width: 30px;
+}
+.team-block .team-contact-block .fa.fa-linkedin {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
 .module .module-intro {
   margin: 0 auto 30px auto;
   max-width: 800px;
@@ -1824,6 +1920,25 @@ object {
     margin: 0 0 30px 0;
   }
 
+  .team-members .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .team-block {
+    width: 48.5%;
+  }
+  .team-block .team-contact-block {
+    margin: 10px 20px 0 20px;
+  }
+
   .module .module-content.flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1919,6 +2034,9 @@ object {
     margin: 0;
     width: 47.5%;
   }
+  .secondary-intro-content .intro-content-text.full {
+    width: 100%;
+  }
   .secondary-intro-content .intro-content-image {
     overflow: hidden;
     position: relative;
@@ -1994,6 +2112,10 @@ object {
   .client-slider-module .full {
     margin: 0 0 10px 0;
     overflow: hidden;
+  }
+
+  .team-block .team-contact-block {
+    margin: 10px 50px 0 50px;
   }
 
   .module .module-content .mc-item.one-third {
@@ -2253,6 +2375,10 @@ object {
   .benefits .constrain {
     padding: 0 30px;
   }
+
+  .team-block .team-contact-block {
+    margin: 10px 100px 0 100px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .p30 {
@@ -2273,6 +2399,13 @@ object {
 
   .intro-content {
     background-position: center 60px;
+  }
+
+  .team-block {
+    width: 31%;
+  }
+  .team-block .team-contact-block {
+    margin: 10px 40px 0 40px;
   }
 
   .footer-ident {
@@ -2300,6 +2433,10 @@ object {
     height: 100%;
     max-width: none;
     width: 100%;
+  }
+
+  .team-block .team-contact-block {
+    margin: 10px 50px 0 50px;
   }
 }
 @media only screen and (min-width: 1220px) {

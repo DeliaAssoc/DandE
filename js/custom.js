@@ -6,7 +6,8 @@ $( document ).ready( function() {
 	$mobSearch = $( 'a.mobile-search' ),
 	$dsktpSearch = $( 'a.dsktp-search' ),
 	$headerHeight = $( '.site-header' ).height(),
-	$siteCont = $( '.content-area' );
+	$siteCont = $( '.content-area' ),
+	$tmi = $( '.team-main-info' );
 
 	$siteCont.css( 'paddingTop', $headerHeight - 5 );
 
@@ -74,6 +75,16 @@ $( document ).ready( function() {
 	$( '.testimonial-slider' ).slick({
 		arrows: false,
 		dots: true
+	});
+
+	// TEAM BLOCK FUNCTIONALITY
+	$tmi.on( 'click', function(){
+		$( this ).siblings( '.team-bio-block' ).addClass( 'active' )
+	});
+
+	$( '.team-bio-block' ).on( 'click', function( e ){
+		e.preventDefault();
+		$( this ).removeClass( 'active' );
 	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*

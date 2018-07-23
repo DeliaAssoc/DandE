@@ -40,6 +40,30 @@
         }
     }
 
+    // TEAM
+    .team-members {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .team-block {
+        width: 48.5%;
+
+        .team-contact-block {
+            margin: 10px 20px 0 20px;
+        }
+    }
+
     // MODULES TEMPLATE
     .module {
 
@@ -166,6 +190,10 @@
         .intro-content-text {
             margin: 0;
             width: 47.5%;
+
+            &.full {
+                width: 100%;
+            }
         }
 
         .intro-content-image {
@@ -268,6 +296,14 @@
         }
     }
 
+    // TEAM
+    .team-block {
+
+        .team-contact-block {
+            margin: 10px 50px 0 50px;
+        }
+    }
+    
     // MODULES TEMPLATE
     .module {
 
@@ -610,6 +646,14 @@
             padding: 0 30px;
         }
     }
+
+    // TEAM
+    .team-block {
+
+        .team-contact-block {
+            margin: 10px 100px 0 100px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -637,6 +681,15 @@
         background-position: center 60px;
     }
 
+    // TEAM
+    .team-block {
+        width: 31%;
+
+        .team-contact-block {
+            margin: 10px 40px 0 40px;
+        }
+    }
+    
     // FOOTER
     .footer-ident {
         width: 50%;   
@@ -677,6 +730,14 @@
                 max-width: none;
                 width: 100%;
             }
+        }
+    }
+
+    // TEAM
+    .team-block {
+
+        .team-contact-block {
+            margin: 10px 50px 0 50px;
         }
     }
 }

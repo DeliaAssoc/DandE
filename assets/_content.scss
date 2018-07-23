@@ -169,6 +169,109 @@ ol.bennies > li:before {
 	}
 }
 
+// TEAM
+.team-block {
+	background-color: $lightest;
+	margin: 0 0 20px 0;
+	position: relative;
+
+	.team-bio-block {
+		background-color: #ebebeb;
+		border-bottom: 10px solid $green;
+		border-top: 10px solid $green;
+		-webkit-box-shadow: 0 0 7px 2px rgba(0,0,0,.15);
+		box-shadow: 0 0 7px 2px rgba(0,0,0,.15);
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		@include translow;
+		visibility: hidden;
+		width: 100%;
+
+		&.active {
+			opacity: 1;
+			@include translow;
+			visibility: visible;
+		}
+
+		.bio {
+			margin: 10px 0 0 0;
+		}
+	}
+
+	.team-main-info {
+		padding: 115px 0;
+		text-align: center;
+	}
+
+	h3 {
+		color: $darkest;
+		font-size: 22px;
+		font-weight: 900;
+		margin: 0 0 3px 0;
+	}
+
+	.close-bio {
+		position: absolute;
+		right: 10px;
+		top: 3px;
+	}
+
+	.job-title {
+		color: $ltgray;
+		font-style: italic;
+		font-weight: 700;
+	}
+
+	.team-image {
+		background-color: $green;
+		border-radius: 50%;
+		display: inline-block;
+		height: 175px;
+		margin: 0 0 15px 0;
+		width: 175px;
+	}
+
+	.team-contact-block {
+		border-top: 1px solid #ebebeb;
+		font-size: 14px;
+		font-weight: 900;
+		margin: 10px 0 0 0;
+		padding: 10px 0 0 0;
+		
+		.contact-item {
+			color: $darkest;
+			margin: 0 0 5px 0;
+
+			a {
+				color: $darkest;
+			}
+		}
+
+		.fa {
+			color: $green;
+		}
+
+		.team-linkedin {
+			background-color: $green;
+			display: inline-block;
+			height: 30px;
+			padding: 4px 0 0 0;
+			text-align: center;
+			width: 30px;
+		}
+
+		.fa.fa-linkedin {
+			color: $lightest;
+			font-size: 20px;
+		}
+	}
+}
+
 // MODULES TEMPLATE
 .module {
 

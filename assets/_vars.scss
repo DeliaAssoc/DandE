@@ -4,7 +4,7 @@
 
 
 $lightest: #FFFFFF;
-$darkest: #000000;
+$darkest: #231f20;
 $green: #75be4b;
 $ltblue: #29b8e9;
 $blue: #243e74;
@@ -51,4 +51,12 @@ $fa5: 'Font Awesome\ 5 Free', sans-serif;
     -ms-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+}
+
+@mixin translow() {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
