@@ -1661,6 +1661,81 @@ ol.bennies > li:before {
   font-size: 20px;
 }
 
+.contact-info-block {
+  border-bottom: 2px solid #29b8e9;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+}
+.contact-info-block:last-of-type {
+  border: 0;
+}
+.contact-info-block h4 {
+  color: #75be4b;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.cp-contact-address {
+  margin: 0 0 10px 0;
+}
+
+.cp-contact-info {
+  color: #6d6f71;
+  font-weight: 700;
+}
+.cp-contact-info .contact-item {
+  margin: 0 0 5px 0;
+}
+.cp-contact-info i {
+  color: #29b8e9;
+  margin: 0 5px 0 0;
+}
+.cp-contact-info a {
+  color: #6d6f71;
+  font-weight: 700;
+}
+
+.contact-page-form .form-subcontent {
+  margin: 0 0 20px 0;
+}
+.contact-page-form input {
+  height: 44px;
+  margin: 0 0 20px 0;
+}
+.contact-page-form input, .contact-page-form textarea {
+  color: #243e74;
+  background-color: #ddf1f8;
+  border: 1px solid #ebebeb;
+}
+.contact-page-form input::-webkit-input-placeholder, .contact-page-form textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #243e74;
+}
+.contact-page-form input ::-moz-placeholder, .contact-page-form textarea ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #243e74;
+}
+.contact-page-form input :-ms-input-placeholder, .contact-page-form textarea :-ms-input-placeholder {
+  /* IE 10+ */
+  color: #243e74;
+}
+.contact-page-form input :-moz-placeholder, .contact-page-form textarea :-moz-placeholder {
+  /* Firefox 18- */
+  color: #243e74;
+}
+.contact-page-form input:focus, .contact-page-form textarea:focus {
+  outline: 2px solid #29b8e9;
+}
+.contact-page-form input[type=submit] {
+  background-color: #29b8e9;
+  color: #FFFFFF;
+  font-weight: 700;
+  height: auto;
+  margin: 0;
+  padding: 20px 35px;
+  text-transform: uppercase;
+}
+
 .module .module-intro {
   margin: 0 auto 30px auto;
   max-width: 800px;
@@ -2118,6 +2193,20 @@ object {
     margin: 10px 50px 0 50px;
   }
 
+  .contact-intro-content .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .contact-intro-content .intro-content-text,
+  .contact-intro-content .contact-page-form {
+    width: 47.5%;
+  }
+
   .module .module-content .mc-item.one-third {
     width: 30%;
   }
@@ -2406,6 +2495,23 @@ object {
   }
   .team-block .team-contact-block {
     margin: 10px 40px 0 40px;
+  }
+
+  .intro-content-text {
+    width: 47%;
+  }
+
+  .contact-info-block {
+    margin: 0 0 25px 0;
+    padding: 0 0 25px 0;
+  }
+
+  .contact-page-form {
+    width: 47%;
+  }
+  .contact-page-form .col-inputs {
+    column-count: 2;
+    column-gap: 20px;
   }
 
   .footer-ident {

@@ -304,6 +304,25 @@
         }
     }
     
+    // CONTACT
+    .contact-intro-content {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .intro-content-text,
+        .contact-page-form {
+            width: 47.5%;
+        }
+    }
+
     // MODULES TEMPLATE
     .module {
 
@@ -690,6 +709,25 @@
         }
     }
     
+    // CONTACT
+    .intro-content-text {
+        width: 47%;
+    }
+
+    .contact-info-block {
+        margin: 0 0 25px 0;
+        padding: 0 0 25px 0;
+    }
+
+    .contact-page-form {
+        width: 47%;
+
+        .col-inputs {
+            column-count: 2;
+            column-gap: 20px;
+        }
+    }
+
     // FOOTER
     .footer-ident {
         width: 50%;   
