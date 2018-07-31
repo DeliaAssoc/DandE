@@ -8,7 +8,14 @@
  */
 
 ?>
-
+<div class="modal-video-window">
+	<span class="close">&times;</span>
+	<div class="modal-video">
+		<div class="constrain">
+			Video Here
+		</div>
+	</div>
+</div
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <section class="secondary-intro-content p60">
@@ -25,6 +32,46 @@
             </div>
         </div>
     </section>
+
+    <?php if ( have_rows( 'solutions_&_services' ) ) : ?>
+        <section class="about-solutions p30 blue-bg">
+            <div class="constrain">
+                <h2><?php the_field( 'solutions_&_services_title' ); ?></h2>
+                <div class="flexxed">
+                    <?php while ( have_rows( 'solutions_&_services' ) ) : the_row(); ?>
+
+                        <div class="ss-block">
+                            <?php $sIcon = get_sub_field( 'icon' ); ?>
+                            <div class="ss-image">
+                                <img src="<?php echo $sIcon[ 'url' ]; ?>" alt="<?php echo $sIcon[ 'alt' ]; ?>">
+                            </div>
+                            <div class="ss-title"><?php the_sub_field( 'solution_service' ); ?></div>
+                        </div>
+
+                    <?php endwhile; ?>
+                </div>
+                <a class="btn btn-lg green-bg" href="<?php the_field( 'solutions_services_cta_link_url' ); ?>" class="href"><?php the_field( 'solutions_services_cta_link_text' ); ?></a>
+            </div>
+        </section>
+
+    <?php endif; ?>
+
+    <?php if ( have_rows( 'industries' ) ) : ?>
+        <section class="about-industries p30">
+            <div class="constrain">
+                <h2><?php the_field( 'industries_title' ); ?></h2>
+                <div class="ind-cols">
+                    <?php while( have_rows( 'industries' ) ) : the_row(); ?>
+                        <div class="industry">
+                            <?php the_sub_field( 'industry' ); ?>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+                <a class="btn btn-lg ltblue-bg" href="<?php the_field( 'industries_cta_link_url' ); ?>" class="href"><?php the_field( 'industries_cta_link_text' ); ?></a>
+            </div>
+        </section>
+
+    <?php endif; ?>
 
     <?php if ( get_field( 'testimonials_option' ) == 'yes' ) : ?>
         <section class="testimonial-slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_module_background_image', 'option' ); ?>' );">
@@ -105,7 +152,7 @@
             </div><!-- .constrain -->
         </section><!-- .client-slider -->
     <?php endif; ?>
-    
+
     <?php if ( get_field( 'contact_section_option' ) == 'yes' ) : ?>
         <section class="contact-module flexxed">
             <div class="half left-half p60">

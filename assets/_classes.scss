@@ -404,3 +404,38 @@ section {
 	}
 	
 }
+
+.modal-video-window {
+    background-color: rgba( 0, 0, 0, 0.75 );
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+
+    .close {
+        color: rgba( $lightest, 0.75 );
+        cursor: pointer;
+        display: block;
+        font-size: 60px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 40px;
+        width: 50px;
+    }
+}
+
+.modal-video {
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    max-width: 500px;
+    right: 0;
+    text-align: center;
+    top: 130px;
+}

@@ -40,6 +40,12 @@
         }
     }
 
+    // ABOUT
+    .ind-cols {
+        -webkit-columns: 2;
+                columns: 2;
+    }
+
     // TEAM
     .team-members {
 
@@ -310,6 +316,50 @@
         .btn-md {
             margin: 0 20px;
         }
+    }
+
+    // ABOUT
+    .about-solutions {
+
+        h2 {
+            margin: 0 0 40px 0;
+        }
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+
+        .btn {
+            margin: 40px 0 0 0;
+        }
+    }
+
+    .ss-block {
+        width: 48%;
+    }
+
+    .about-industries {
+
+        h2 {
+            margin: 0 0 40px 0;
+        }
+
+        .btn {
+            margin: 40px 0 0 0;
+        }
+    }
+
+    .ind-cols {
+        -webkit-columns: 3;
+                columns: 3;
     }
 
     // TEAM
@@ -714,6 +764,16 @@
 
     .intro-content {
         background-position: center 60px;
+    }
+
+    // ABOUT
+    .ss-block {
+        width: 32%;
+    }
+
+    .ind-cols {
+        -webkit-columns: 4;
+                columns: 4;
     }
 
     // TEAM

@@ -5,6 +5,9 @@ $( document ).ready( function() {
 	$modalClose = $( '.modal-search-window .close' ),
 	$mobSearch = $( 'a.mobile-search' ),
 	$dsktpSearch = $( 'a.dsktp-search' ),
+	$modalVidBtn = $( '.see-how-we-work' ),
+	$modalVid = $( '.modal-video-window' ),
+	$ModalVidClose = $( '.modal-video-window .close' ),
 	$headerHeight = $( '.site-header' ).height(),
 	$siteCont = $( '.content-area' ),
 	$tb = $( '.team-block' );
@@ -30,17 +33,29 @@ $( document ).ready( function() {
 		$modal.fadeOut();
 	});
 
-	// OPEN SEARCH FORM
-	$( 'a.search' ).on( 'click', function( e ){
+	// OPEN/CLOSE VIDEO MODAL
+	$modalVidBtn.on( 'click', function( e ){
 
-			e.preventDefault();
-			
-			if ( $('.search-field').hasClass( 'opened' ) ) {
-				$('.search-field').removeClass( 'opened' );
-			} else {
-				$('.search-field').addClass( 'opened' );
-			}
+		e.preventDefault();
+		$modalVid.fadeIn();
+
 	});
+
+	( $ModalVidClose ).on( 'click', function( e ){
+		$modalVid.fadeOut();
+	});
+
+	// OPEN SEARCH FORM
+	// $( 'a.search' ).on( 'click', function( e ){
+
+	// 		e.preventDefault();
+			
+	// 		if ( $('.search-field').hasClass( 'opened' ) ) {
+	// 			$('.search-field').removeClass( 'opened' );
+	// 		} else {
+	// 			$('.search-field').addClass( 'opened' );
+	// 		}
+	// });
 
 	// DEFAULT PAGE SLIDER
 	$( '.hero-slider' ).slick({

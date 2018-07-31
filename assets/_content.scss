@@ -5,6 +5,7 @@
 
 // HOMEPAGE
 .hero-slider {
+	background-color: #ebebeb;
 
 	.slide {
 
@@ -264,8 +265,62 @@ ol.bennies > li:before {
 	}
 
 	a.bio-btn {
-		margin: 10px 0 0 0;
+		margin: 20px 0 0 0;
 	}
+}
+
+// ABOUT
+.see-how-about-btn {
+	display: inline-block;
+	margin: 30px 0 0;
+}
+
+.about-solutions {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/solutions-tile-bg.png' );
+	background-size: cover;
+	color: $lightest;
+	text-align: center;
+
+	h2 {
+		color: $lightest;
+		margin: 0 0 20px 0;
+	}
+
+	.btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+.ss-block {
+	font-weight: 600;
+	margin: 0 0 20px 0;
+}
+
+.ss-image {
+	background-color: $ltblue;
+	border-radius: 50%;
+	display: inline-block;
+	height: 40px;
+	margin: 0 0 5px 0;
+	width: 40px;
+}
+
+.about-industries {
+	text-align: center;
+
+	h2 {
+		margin: 0 0 20px 0;
+	}
+
+	.btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+.industry {
+	color: $ltgray;
+	font-weight: 600;
+	margin: 0 0 5px 0;
 }
 
 // CONTACT

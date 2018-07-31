@@ -799,6 +799,40 @@ section {
   outline: 0;
 }
 
+.modal-video-window {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+.modal-video-window .close {
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  display: block;
+  font-size: 60px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 40px;
+  width: 50px;
+}
+
+.modal-video {
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  right: 0;
+  text-align: center;
+  top: 130px;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1410,6 +1444,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.hero-slider {
+  background-color: #ebebeb;
+}
 .hero-slider .slide img {
   width: 100%;
 }
@@ -1651,7 +1688,56 @@ ol.bennies > li:before {
   font-size: 20px;
 }
 .team-block a.bio-btn {
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
+}
+
+.see-how-about-btn {
+  display: inline-block;
+  margin: 30px 0 0;
+}
+
+.about-solutions {
+  background-image: url("http://localhost/dande/wp-content/themes/dae/img/solutions-tile-bg.png");
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+.about-solutions h2 {
+  color: #FFFFFF;
+  margin: 0 0 20px 0;
+}
+.about-solutions .btn {
+  margin: 20px 0 0 0;
+}
+
+.ss-block {
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.ss-image {
+  background-color: #29b8e9;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  margin: 0 0 5px 0;
+  width: 40px;
+}
+
+.about-industries {
+  text-align: center;
+}
+.about-industries h2 {
+  margin: 0 0 20px 0;
+}
+.about-industries .btn {
+  margin: 20px 0 0 0;
+}
+
+.industry {
+  color: #939598;
+  font-weight: 600;
+  margin: 0 0 5px 0;
 }
 
 .contact-info-block {
@@ -1988,6 +2074,11 @@ object {
     margin: 0 0 30px 0;
   }
 
+  .ind-cols {
+    -webkit-columns: 2;
+    columns: 2;
+  }
+
   .team-members .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2194,6 +2285,40 @@ object {
   }
   .slide-btns .btn-md {
     margin: 0 20px;
+  }
+
+  .about-solutions h2 {
+    margin: 0 0 40px 0;
+  }
+  .about-solutions .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .about-solutions .btn {
+    margin: 40px 0 0 0;
+  }
+
+  .ss-block {
+    width: 48%;
+  }
+
+  .about-industries h2 {
+    margin: 0 0 40px 0;
+  }
+  .about-industries .btn {
+    margin: 40px 0 0 0;
+  }
+
+  .ind-cols {
+    -webkit-columns: 3;
+    columns: 3;
   }
 
   .team-block .team-contact-block {
@@ -2495,6 +2620,15 @@ object {
 
   .intro-content {
     background-position: center 60px;
+  }
+
+  .ss-block {
+    width: 32%;
+  }
+
+  .ind-cols {
+    -webkit-columns: 4;
+    columns: 4;
   }
 
   .team-block {

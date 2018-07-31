@@ -8,7 +8,14 @@
  */
 
 ?>
-
+<div class="modal-video-window">
+	<span class="close">&times;</span>
+	<div class="modal-video">
+		<div class="constrain">
+			Video Here
+		</div>
+	</div>
+</div
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
     <section class="hero">
@@ -53,7 +60,7 @@
             <div class="half">
                 <a href="<?php the_field( 'main_content_main_image_link' ); ?>">
                     <?php $mImage = get_field( 'main_content_image' ); ?>
-                    <img src="<?php echo $mImage[ 'url' ]; ?>" alt="<?php echo $mImage[ 'alt' ]; ?>">
+                    <img class="see-how-we-work" src="<?php echo $mImage[ 'url' ]; ?>" alt="<?php echo $mImage[ 'alt' ]; ?>">
                 </a>
             </div>
         </div>
