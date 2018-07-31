@@ -296,6 +296,22 @@
         }
     }
 
+    .slide-btns {
+        max-width: 700px;
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+                    justify-content: center;
+        }
+
+        .btn-md {
+            margin: 0 20px;
+        }
+    }
+
     // TEAM
     .team-block {
 

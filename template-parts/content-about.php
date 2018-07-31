@@ -26,6 +26,86 @@
         </div>
     </section>
 
+    <?php if ( get_field( 'testimonials_option' ) == 'yes' ) : ?>
+        <section class="testimonial-slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_module_background_image', 'option' ); ?>' );">
+            <div class="constrain">
+                <div class="subtitle noline white">
+                    <?php the_field( 'testimonials_module_subtitle', 'option' ); ?>
+                </div>
+                <h2><?php the_field( 'testimonials_module_heading', 'option' ); ?></h2>
+                <div class="testimonial-slider">
+                    <?php
+                        // WP_Query arguments
+                        $args = array(
+                            'post_type'              => array( 'testimonial' ),
+                            'order'                  => 'DESC',
+                            'orderby'                => 'title',
+                        );
+
+                        // The Query
+                        $tQuery = new WP_Query( $args );
+
+                        // The Loop
+                        if ( $tQuery->have_posts() ) {
+                            while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
+                                <div class="testimonial-slide">
+                                    <div class="tslide-content">
+                                        <?php the_content(); ?>
+                                        <div class="testimonial-name">
+                                            - <?php the_title(); ?>
+                                        </div>
+                                    </div>
+                                </div><!-- .testimonial-slide -->
+                            <?php endwhile; ?>
+                        <?php } 
+
+                        // Restore original Post Data
+                        wp_reset_postdata();
+                    ?>
+                </div><!-- .testimonial-slider -->
+            </div><!-- .constrain-->
+        </section><!-- .testimonials-slider -->
+    <?php endif; ?>
+
+    <?php if ( get_field( 'client_slider_option' ) == 'yes' ) : ?>
+        <section class="client-slider-module p60">
+            <div class="constrain">
+                <div class="full">
+                    <div class="subtitle noline">
+                        <?php the_field( 'client_module_subtitle', 'option' ); ?>
+                    </div>
+                    <h2><?php the_field( 'client_module_heading', 'option' ); ?></h2>
+                </div>
+
+                <?php
+                    // WP_Query arguments
+                    $args = array(
+                        'post_type'              => array( 'client' ),
+                        'order'                  => 'DESC',
+                        'orderby'                => 'title',
+                    );
+
+                    // The Query
+                    $cQuery = new WP_Query( $args );
+
+                    // The Loop
+                    if ( $cQuery->have_posts() ) { ?>
+                        <div class="client-slider">
+                        <?php while ( $cQuery->have_posts() ) : $cQuery->the_post(); ?>
+                            <div class="client-slide">
+                                <?php the_post_thumbnail(); ?>
+                            </div><!-- .c-slide -->
+                        <?php endwhile; ?>
+                        </div>
+                    <?php } 
+
+                    // Restore original Post Data
+                    wp_reset_postdata();
+                ?>
+            </div><!-- .constrain -->
+        </section><!-- .client-slider -->
+    <?php endif; ?>
+    
     <?php if ( get_field( 'contact_section_option' ) == 'yes' ) : ?>
         <section class="contact-module flexxed">
             <div class="half left-half p60">

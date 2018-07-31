@@ -449,17 +449,14 @@ section {
 }
 
 .btn-sm {
-  max-width: 115px;
   padding: 7px 10px;
 }
 
 .btn-md {
-  max-width: 165px;
   padding: 10px 20px;
 }
 
 .btn-lg {
-  max-width: 200px;
   padding: 15px 30px;
 }
 
@@ -1432,15 +1429,6 @@ a:hover, a:active {
   margin: 0 auto;
   text-transform: uppercase;
 }
-.slide-btns.flexxed {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
 .slide-btns .fa {
   color: #75be4b;
 }
@@ -1613,7 +1601,9 @@ ol.bennies > li:before {
   font-weight: 900;
   margin: 0 0 3px 0;
 }
-.team-block .close-bio {
+.team-block a.close-bio {
+  color: #29b8e9;
+  font-size: 25px;
   position: absolute;
   right: 10px;
   top: 3px;
@@ -1659,6 +1649,9 @@ ol.bennies > li:before {
 .team-block .team-contact-block .fa.fa-linkedin {
   color: #FFFFFF;
   font-size: 20px;
+}
+.team-block a.bio-btn {
+  margin: 10px 0 0 0;
 }
 
 .contact-info-block {
@@ -2187,6 +2180,20 @@ object {
   .client-slider-module .full {
     margin: 0 0 10px 0;
     overflow: hidden;
+  }
+
+  .slide-btns {
+    max-width: 700px;
+  }
+  .slide-btns.flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .slide-btns .btn-md {
+    margin: 0 20px;
   }
 
   .team-block .team-contact-block {

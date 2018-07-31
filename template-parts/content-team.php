@@ -43,6 +43,7 @@
                         
                         <div class="team-block">
                             <div class="team-bio-block">
+                                <a href="#" class="close-bio"><i class="fa fa-times" aria-hidden="true"></i></a>
                                 <h3><?php the_title(); ?></h3>
                                 <div class="job-title"><?php the_field( 'team_title' ); ?></div>
                                 <div class="bio">
@@ -69,6 +70,7 @@
                                     <?php endif; ?>
                                     <a href="<?php the_field( 'linkedin_url' ); ?>" class="team-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                 </div>
+                                <a href="#" class="bio-btn btn-sm ltblue-bg">Read More</a>
                             </div>
                         </div>
                         

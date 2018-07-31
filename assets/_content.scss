@@ -29,16 +29,6 @@
 	margin: 0 auto;
 	text-transform: uppercase;
 
-	&.flexxed {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
-	}
-
 	.fa {
 		color: $green;
 	}
@@ -215,7 +205,9 @@ ol.bennies > li:before {
 		margin: 0 0 3px 0;
 	}
 
-	.close-bio {
+	a.close-bio {
+		color: $ltblue;
+		font-size: 25px;
 		position: absolute;
 		right: 10px;
 		top: 3px;
@@ -269,6 +261,10 @@ ol.bennies > li:before {
 			color: $lightest;
 			font-size: 20px;
 		}
+	}
+
+	a.bio-btn {
+		margin: 10px 0 0 0;
 	}
 }
 

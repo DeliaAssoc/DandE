@@ -7,7 +7,7 @@ $( document ).ready( function() {
 	$dsktpSearch = $( 'a.dsktp-search' ),
 	$headerHeight = $( '.site-header' ).height(),
 	$siteCont = $( '.content-area' ),
-	$tmi = $( '.team-main-info' );
+	$tb = $( '.team-block' );
 
 	$siteCont.css( 'paddingTop', $headerHeight - 5 );
 
@@ -78,13 +78,14 @@ $( document ).ready( function() {
 	});
 
 	// TEAM BLOCK FUNCTIONALITY
-	$tmi.on( 'click', function(){
-		$( this ).siblings( '.team-bio-block' ).addClass( 'active' )
+	$tb.find( 'a.bio-btn' ).on( 'click', function( e ){
+		e.preventDefault();
+		$( this ).closest( '.team-block' ).find( '.team-bio-block' ).addClass( 'active' )
 	});
 
-	$( '.team-bio-block' ).on( 'click', function( e ){
+	$( '.team-bio-block' ).find( '.close-bio' ).on( 'click', function( e ){
 		e.preventDefault();
-		$( this ).removeClass( 'active' );
+		$( this ).closest( '.team-bio-block' ).removeClass( 'active' );
 	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
