@@ -165,6 +165,9 @@ section {
 	color: $dkgray;
 }
 
+.green-txt {
+	color: $green;
+}
 
 .subtitle {
 	color: $ltblue;
@@ -209,6 +212,27 @@ section {
 		top: 50%;
 		transform: translateY(-50%);
 		width: 40px;
+	}
+}
+
+// CTA MODULE
+.cta-module {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/cta-module-bg-image.jpg' );
+	background-position: center center;
+	background-repeat: repeat;
+	color: $lightest;
+
+	a.btn {
+		margin: 0 0 10px 0;
+		text-align: center;
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+
+	.fa {
+		color: $green;
 	}
 }
 

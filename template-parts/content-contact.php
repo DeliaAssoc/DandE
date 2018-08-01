@@ -14,7 +14,7 @@
     <section class="contact-intro-content p60">
         <div class="constrain flexxed">
             <div class="intro-content-text">
-                <div class="subtitle"><?php the_title(); ?></div>
+                <h1 class="subtitle"><?php the_title(); ?></h1>
                 <div class="main-contact contact-info-block">
                     <h2>Get in Touch Today</h2>
                     <div class="cp-contact-address">

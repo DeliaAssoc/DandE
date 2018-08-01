@@ -8,14 +8,18 @@
  */
 
 ?>
+<?php if ( get_field( 'video_url' ) ) : ?>
 <div class="modal-video-window">
 	<span class="close">&times;</span>
 	<div class="modal-video">
 		<div class="constrain">
-			Video Here
+            <div class="responsive">
+                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
 		</div>
 	</div>
-</div
+</div>
+<?php endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
     <section class="hero">

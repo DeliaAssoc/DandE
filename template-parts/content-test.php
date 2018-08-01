@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying about.php
+ * Template part for displaying testimonials.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -8,32 +8,53 @@
  */
 
 ?>
-<?php if ( get_field( 'video_url' ) ) : ?>
-<div class="modal-video-window">
-	<span class="close">&times;</span>
-	<div class="modal-video">
-		<div class="constrain">
-            <div class="responsive">
-                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-		</div>
-	</div>
-</div>
-<?php endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <section class="secondary-intro-content p60">
         <div class="constrain flexxed">
-            <div class="intro-content-text">
+            <div class="intro">
                 <h1 class="subtitle"><?php the_title(); ?></h1>
                 <div class="intro-text">
                     <?php the_content(); ?>
                 </div>
             </div>
-            <div class="intro-content-image">
+            <!-- <div class="intro-content-image">
                 <?php $iImage = get_field( 'intro_content_image' ); ?>
                 <img src="<?php echo $iImage[ 'url' ]; ?>" alt="<?php echo $iImage[ 'alt' ]; ?>">
             </div>
+        </div> -->
+    </section>
+
+    <section class="testimonials">
+        <div class="constrain">
+            <?php
+                // WP_Query arguments
+                $args = array(
+                    'post_type'              => array( 'testimonial' ),
+                    'order'                  => 'DESC',
+                    'orderby'                => 'title',
+                );
+
+                // The Query
+                $tQuery = new WP_Query( $args );
+
+                // The Loop
+                if ( $tQuery->have_posts() ) {
+                    while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
+                        <div class="testimonial-block">
+                            <div class="tblock-content">
+                                <?php the_content(); ?>
+                                <div class="testimonial-name">
+                                    - <?php the_title(); ?>
+                                </div>
+                            </div>
+                        </div><!-- .testimonial-block -->
+                    <?php endwhile; ?>
+                <?php } 
+
+                // Restore original Post Data
+                wp_reset_postdata();
+            ?>
         </div>
     </section>
 
@@ -74,48 +95,18 @@
                 <a class="btn btn-lg ltblue-bg" href="<?php the_field( 'industries_cta_link_url' ); ?>" class="href"><?php the_field( 'industries_cta_link_text' ); ?></a>
             </div>
         </section>
-
     <?php endif; ?>
 
-    <?php if ( get_field( 'testimonials_option' ) == 'yes' ) : ?>
-        <section class="testimonial-slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_module_background_image', 'option' ); ?>' );">
+    <?php if ( get_field( 'cta_section_option' ) == 'yes' ) : ?>
+        <section class="cta-module p60">
             <div class="constrain">
-                <div class="subtitle noline white">
-                    <?php the_field( 'testimonials_module_subtitle', 'option' ); ?>
+                <div class="flexxed">
+                    <a href="#" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
+                    <a href="#" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
+                    <a href="/contact" class="btn btn-lg blue-bg"><i class="fa fa-paper-plane"></i> Contact Us</a>
                 </div>
-                <h2><?php the_field( 'testimonials_module_heading', 'option' ); ?></h2>
-                <div class="testimonial-slider">
-                    <?php
-                        // WP_Query arguments
-                        $args = array(
-                            'post_type'              => array( 'testimonial' ),
-                            'order'                  => 'DESC',
-                            'orderby'                => 'title',
-                        );
-
-                        // The Query
-                        $tQuery = new WP_Query( $args );
-
-                        // The Loop
-                        if ( $tQuery->have_posts() ) {
-                            while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
-                                <div class="testimonial-slide">
-                                    <div class="tslide-content">
-                                        <?php the_content(); ?>
-                                        <div class="testimonial-name">
-                                            - <?php the_title(); ?>
-                                        </div>
-                                    </div>
-                                </div><!-- .testimonial-slide -->
-                            <?php endwhile; ?>
-                        <?php } 
-
-                        // Restore original Post Data
-                        wp_reset_postdata();
-                    ?>
-                </div><!-- .testimonial-slider -->
-            </div><!-- .constrain-->
-        </section><!-- .testimonials-slider -->
+            </div>
+        </section>
     <?php endif; ?>
 
     <?php if ( get_field( 'client_slider_option' ) == 'yes' ) : ?>

@@ -14,7 +14,7 @@
     <section class="secondary-intro-content p60">
         <div class="constrain">
             <div class="intro-content-text full">
-                <div class="subtitle"><?php the_title(); ?></div>
+                <h1 class="subtitle"><?php the_title(); ?></h1>
                 <div class="intro-text">
                     <?php the_content(); ?>
                 </div>
