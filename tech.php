@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Service
+ * Template Name: Technologies
  *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -23,7 +23,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'service' );
+			get_template_part( 'template-parts/content', 'technologies' );
 
 		endwhile; // End of the loop.
 		?>

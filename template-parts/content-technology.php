@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying services.php
+ * Template part for displaying single-technology.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -8,98 +8,61 @@
  */
 
 ?>
-<?php if ( get_field( 'video_url' ) ) : ?>
-<div class="modal-video-window">
-	<span class="close">&times;</span>
-	<div class="modal-video">
-		<div class="constrain">
-            <div class="responsive">
-                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-		</div>
-	</div>
-</div>
-<?php endif; ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'technology' ); ?>>
 
     <section class="secondary-intro-content p60">
         <div class="constrain flexxed">
             <div class="intro-content-text">
-                <h1 class="subtitle"><?php the_title(); ?></h1>
+                <div class="subtitle">Technology</div>
                 <div class="intro-text">
+                    <h1><?php the_title(); ?></h1>
                     <?php the_content(); ?>
                 </div>
             </div>
             <div class="intro-content-image">
-                <?php $iImage = get_field( 'intro_content_image' ); ?>
-                <img src="<?php echo $iImage[ 'url' ]; ?>" alt="<?php echo $iImage[ 'alt' ]; ?>">
+                <?php the_post_thumbnail(); ?>
             </div>
         </div>
     </section>
 
-    <section class="possibilities p60">
-        <div class="constrain">
-            <div class="subtitle noline">
-                <?php the_field( 'possibilities_subtitle', 'options' ); ?>
-            </div>
-            <div class="full">
-                <?php the_field( 'possibilities_content', 'options' ); ?>
-            </div>
-            <div class="pos-items flexxed">
-                <?php if ( have_rows( 'possibilities_items', 'options' ) ) : ?>
-                    <?php $pCount = count( get_field( 'possibilities_items', 'options' ) ); ?>
-                    <?php while ( have_rows( 'possibilities_items', 'options' ) ) : the_row(); ?>
-                        <div class="pos-item pitems-<?php echo $pCount; ?>">
-                            <?php $pImage = get_sub_field( 'possibility_item_icon', 'options' ); ?>
-                            <div class="pos-icon">
-                                <img src="<?php echo $pImage[ 'url' ]; ?>" alt="<?php echo $pImage[ 'alt' ]; ?>">
+    <?php if ( have_rows( 'technology_sections' ) ) : ?>
+
+        <?php while ( have_rows( 'technology_sections' ) ) : the_row(); ?>
+
+            <?php if ( get_row_layout() == 'content_with_image' ) : ?>
+
+                <section class="flex-content cont-w-image p60 <?php the_sub_field( 'section_color' ); ?>">
+                    <div class="constrain">
+                        <div class="flexxed">
+                            <div class="cwi-image">
+                                <?php $image = get_sub_field( 'section_image' ); ?>
+                                <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
                             </div>
-                            <div class="pos-text">
-                                <?php the_sub_field( 'possibility_item_content', 'options' ); ?>
+                            <div class="cwi-content">
+                                <h2><?php the_sub_field( 'section_heading' ); ?></h2>
+                                <div class="cwi-text">
+                                    <?php the_sub_field( 'section_content' ); ?>
+                                </div>
                             </div>
-                            <a class="pos-link" href="<?php the_sub_field( 'possibility_item_link', 'options' ); ?>">Read More +</a>
                         </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section><!-- .possibilities -->
+                    </div>
+                </section>
 
-    <section class="services p60">
-        <div class="constrain">
-            <div class="flexxed">
-                <?php
-                    // WP_Query arguments
-                    $args = array(
-                        'post_type'              => array( 'service' ),
-                        'order'                  => 'DESC',
-                        'orderby'                => 'title',
-                    );
+            <?php elseif ( get_row_layout() == 'full_width' ) : ?>
+                <section class="flex-content full-width p60 <?php the_sub_field( 'section_color' ); ?>">
+                    <div class="constrain">
+                        <h2><?php the_sub_field( 'section_heading' ); ?></h2>
+                        <div class="fw-content">
+                            <?php the_sub_field( 'section_content' ); ?>
+                        </div>
+                    </div>
+                </section>
+            <?php endif; ?>
 
-                    // The Query
-                    $cQuery = new WP_Query( $args );
+        <?php endwhile; ?>
 
-                    // The Loop
-                    if ( $cQuery->have_posts() ) { ?>
-                        <?php while ( $cQuery->have_posts() ) : $cQuery->the_post(); ?>
-                            <div class="service-block">
-                                <div class="service-thumbnail">
-                                    <?php the_post_thumbnail(); ?>
-                                </div>
-                                <span class="service-title"><?php the_title(); ?></span>
-                                <div class="service-snippet">
-                                    <?php the_field( 'service_snippet' ); ?>
-                                </div>
-                                <a class="read-more" href="<?php the_permalink(); ?>">Read More +</a>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php } 
-                    // Restore original Post Data
-                    wp_reset_postdata();
-                ?>
-            </div>
-        </div>
-    </section><!-- services -->
+    <?php endif; ?>
 
     <?php if ( get_field( 'cta_section_option' ) == 'yes' ) : ?>
         <section class="cta-module p60">
@@ -111,6 +74,47 @@
                 </div>
             </div>
         </section>
+    <?php endif; ?>
+
+    <?php if ( get_field( 'testimonials_option' ) == 'yes' ) : ?>
+        <section class="testimonial-slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_module_background_image', 'option' ); ?>' );">
+            <div class="constrain">
+                <div class="subtitle noline white">
+                    <?php the_field( 'testimonials_module_subtitle', 'option' ); ?>
+                </div>
+                <h2><?php the_field( 'testimonials_module_heading', 'option' ); ?></h2>
+                <div class="testimonial-slider">
+                    <?php
+                        // WP_Query arguments
+                        $args = array(
+                            'post_type'              => array( 'testimonial' ),
+                            'order'                  => 'DESC',
+                            'orderby'                => 'title',
+                        );
+
+                        // The Query
+                        $tQuery = new WP_Query( $args );
+
+                        // The Loop
+                        if ( $tQuery->have_posts() ) {
+                            while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
+                                <div class="testimonial-slide">
+                                    <div class="tslide-content">
+                                        <?php the_content(); ?>
+                                        <div class="testimonial-name">
+                                            - <?php the_title(); ?>
+                                        </div>
+                                    </div>
+                                </div><!-- .testimonial-slide -->
+                            <?php endwhile; ?>
+                        <?php } 
+
+                        // Restore original Post Data
+                        wp_reset_postdata();
+                    ?>
+                </div><!-- .testimonial-slider -->
+            </div><!-- .constrain-->
+        </section><!-- .testimonials-slider -->
     <?php endif; ?>
 
     <?php if ( get_field( 'client_slider_option' ) == 'yes' ) : ?>

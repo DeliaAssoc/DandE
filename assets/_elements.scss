@@ -60,6 +60,34 @@ li > ol {
 	margin: 0;
 }
 
+.site-content {
+
+	ul {
+		padding: 0 0 15px 0;
+
+		li {
+			padding: 0 0 0 11px;
+			position: relative;
+			text-align: left;
+
+			&:before {
+				color: $ltblue;
+				content: '\f111';
+				font-family: $fa;
+				font-size: 6px;
+				left: 0;
+				position: absolute;
+				top: 8px;
+			}
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		padding: 0 0 15px 0;
+	}
+}
+
 dt {
 	font-weight: bold;
 }

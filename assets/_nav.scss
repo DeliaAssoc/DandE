@@ -7,6 +7,7 @@
 a {
 	color: $green;
 	text-decoration: none;
+	@include transmed();
 }
 
 a:visited {

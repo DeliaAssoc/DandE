@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying services.php
+ * Template part for displaying tech.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -37,41 +37,13 @@
         </div>
     </section>
 
-    <section class="possibilities p60">
-        <div class="constrain">
-            <div class="subtitle noline">
-                <?php the_field( 'possibilities_subtitle', 'options' ); ?>
-            </div>
-            <div class="full">
-                <?php the_field( 'possibilities_content', 'options' ); ?>
-            </div>
-            <div class="pos-items flexxed">
-                <?php if ( have_rows( 'possibilities_items', 'options' ) ) : ?>
-                    <?php $pCount = count( get_field( 'possibilities_items', 'options' ) ); ?>
-                    <?php while ( have_rows( 'possibilities_items', 'options' ) ) : the_row(); ?>
-                        <div class="pos-item pitems-<?php echo $pCount; ?>">
-                            <?php $pImage = get_sub_field( 'possibility_item_icon', 'options' ); ?>
-                            <div class="pos-icon">
-                                <img src="<?php echo $pImage[ 'url' ]; ?>" alt="<?php echo $pImage[ 'alt' ]; ?>">
-                            </div>
-                            <div class="pos-text">
-                                <?php the_sub_field( 'possibility_item_content', 'options' ); ?>
-                            </div>
-                            <a class="pos-link" href="<?php the_sub_field( 'possibility_item_link', 'options' ); ?>">Read More +</a>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section><!-- .possibilities -->
-
-    <section class="services p60">
+    <section class="technologies p60">
         <div class="constrain">
             <div class="flexxed">
                 <?php
                     // WP_Query arguments
                     $args = array(
-                        'post_type'              => array( 'service' ),
+                        'post_type'              => array( 'technologies' ),
                         'order'                  => 'DESC',
                         'orderby'                => 'title',
                     );
@@ -82,13 +54,13 @@
                     // The Loop
                     if ( $cQuery->have_posts() ) { ?>
                         <?php while ( $cQuery->have_posts() ) : $cQuery->the_post(); ?>
-                            <div class="service-block">
-                                <div class="service-thumbnail">
+                            <div class="technology-block">
+                                <div class="technology-thumbnail">
                                     <?php the_post_thumbnail(); ?>
                                 </div>
-                                <span class="service-title"><?php the_title(); ?></span>
-                                <div class="service-snippet">
-                                    <?php the_field( 'service_snippet' ); ?>
+                                <span class="technology-title"><?php the_title(); ?></span>
+                                <div class="technology-snippet">
+                                    <?php the_field( 'technology_snippet' ); ?>
                                 </div>
                                 <a class="read-more" href="<?php the_permalink(); ?>">Read More +</a>
                             </div>
@@ -99,7 +71,7 @@
                 ?>
             </div>
         </div>
-    </section><!-- services -->
+    </section>
 
     <?php if ( get_field( 'cta_section_option' ) == 'yes' ) : ?>
         <section class="cta-module p60">
@@ -111,6 +83,47 @@
                 </div>
             </div>
         </section>
+    <?php endif; ?>
+
+    <?php if ( get_field( 'testimonials_option' ) == 'yes' ) : ?>
+        <section class="testimonial-slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_module_background_image', 'option' ); ?>' );">
+            <div class="constrain">
+                <div class="subtitle noline white">
+                    <?php the_field( 'testimonials_module_subtitle', 'option' ); ?>
+                </div>
+                <h2><?php the_field( 'testimonials_module_heading', 'option' ); ?></h2>
+                <div class="testimonial-slider">
+                    <?php
+                        // WP_Query arguments
+                        $args = array(
+                            'post_type'              => array( 'testimonial' ),
+                            'order'                  => 'DESC',
+                            'orderby'                => 'title',
+                        );
+
+                        // The Query
+                        $tQuery = new WP_Query( $args );
+
+                        // The Loop
+                        if ( $tQuery->have_posts() ) {
+                            while ( $tQuery->have_posts() ) : $tQuery->the_post(); ?>
+                                <div class="testimonial-slide">
+                                    <div class="tslide-content">
+                                        <?php the_content(); ?>
+                                        <div class="testimonial-name">
+                                            - <?php the_title(); ?>
+                                        </div>
+                                    </div>
+                                </div><!-- .testimonial-slide -->
+                            <?php endwhile; ?>
+                        <?php } 
+
+                        // Restore original Post Data
+                        wp_reset_postdata();
+                    ?>
+                </div><!-- .testimonial-slider -->
+            </div><!-- .constrain-->
+        </section><!-- .testimonials-slider -->
     <?php endif; ?>
 
     <?php if ( get_field( 'client_slider_option' ) == 'yes' ) : ?>

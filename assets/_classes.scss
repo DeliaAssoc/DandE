@@ -48,12 +48,18 @@ section {
 	padding: 20px 0;
 }
 
-.btn-sm, .btn-md, .btn-lg {
+a.btn-sm, a.btn-md, a.btn-lg {
 	color: $blue;
 	display: inline-block;
 
 	&.white-bg {
 		border: 2px solid $lightest;
+
+		&:hover {
+			background-color: $ltblue;
+			border: 2px solid $ltblue;
+			color: $lightest;
+		}
 	}
 
 	&.green-bg {
@@ -64,11 +70,23 @@ section {
 	&.blue-bg {
 		color: $lightest;
 		border: 2px solid $blue;
+
+		&:hover {
+			background-color: $lightest;
+			border: 2px solid $lightest;
+			color: $green;
+		}
 	}
 
 	&.ltblue-bg {
 		color: $lightest;
 		border: 2px solid $ltblue;
+
+		&:hover {
+			background-color: $blue;
+			border: 2px solid $blue;
+			color: $lightest;
+		}
 	}
 }
 
@@ -88,7 +106,7 @@ section {
 	background-color: $lightest;
 }
 
-.white-brdr {
+a.white-brdr {
 	color: $lightest;
 	border: 2px solid $lightest;
 }
@@ -212,6 +230,20 @@ section {
 		top: 50%;
 		transform: translateY(-50%);
 		width: 40px;
+	}
+}
+
+.full-width {
+	text-align: center;
+}
+
+.technology,
+.service {
+
+	h1 {
+		color: $blue;
+		font-size: 30px;
+		font-weight: 900;
 	}
 }
 

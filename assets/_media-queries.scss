@@ -64,6 +64,24 @@
         width: 48%;
     }
 
+    // TECHNOLOGIES
+    .technologies {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+
+    .technology-block {
+        width: 48%;
+    }
+
     // TEAM
     .team-members {
 
@@ -136,6 +154,16 @@
     
     .p60 {
         padding: 40px 0;
+    }
+
+    .fw-content {
+
+        .cols-3 {
+            -webkit-columns: 2;
+                    columns: 2;
+            -webkit-column-gap: 50px;
+                    column-gap: 50px;
+        }
     }
 
     // TYPOGRAPHY
@@ -409,6 +437,28 @@
         }
     }
     
+    // TECHNOLOGY
+    .cont-w-image {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .cwi-image {
+            width: 48%;
+        }
+
+        .cwi-content {
+            width: 48%;
+        }
+    }
+
     // TESTIMONIALS
     .testimonial-block {
         margin: 0 0 20px 0;
@@ -782,6 +832,24 @@
         width: 31%;
     }
 
+    // TECHNOLOGY
+    .cont-w-image {
+
+        .cwi-image {
+            width: 31%;
+        }
+
+        .cwi-content {
+            width: 65%;
+        }
+    }
+    
+    // TECHNOLOGIES
+    .technology-block {
+        margin: 0 0 20px 0;
+        width: 31%;
+    }
+
     // TEAM
     .team-block {
 
@@ -812,6 +880,14 @@
         padding: 60px 0;
     }
 
+    .fw-content {
+
+        .cols-3 {
+            -webkit-columns: 3;
+                    columns: 3;
+        }
+    }
+
     // HEADER
     .uh-left {
         width: 80%;
@@ -834,6 +910,21 @@
     .ind-cols {
         -webkit-columns: 4;
                 columns: 4;
+    }
+
+    // TECHNOLOGY
+    .cont-w-image {
+
+        .cols-2 {
+            -webkit-column-count: 2;
+                    column-count: 2;
+        }
+    }
+
+    // TECHNOLOGIES
+    .technology-block {
+        margin: 0 0 20px 0;
+        width: 26%;
     }
 
     // TEAM

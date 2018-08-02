@@ -20,13 +20,14 @@
 	</div>
 </div>
 <?php endif; ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'article' ); ?>>
 
     <section class="secondary-intro-content p60">
         <div class="constrain flexxed">
             <div class="intro-content-text">
-                <h1 class="subtitle"><?php the_title(); ?></h1>
+                <div class="subtitle">Service</div>
                 <div class="intro-text">
+                    <h1><?php the_title(); ?></h1>
                     <?php the_content(); ?>
                 </div>
             </div>
