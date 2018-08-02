@@ -1660,6 +1660,27 @@ ol.bennies > li:before {
   margin: 0 0 5px 0;
 }
 
+.service-block {
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+.service-block .service-thumbnail {
+  background-color: #29b8e9;
+  display: inline-block;
+  height: 150px;
+  width: 100%;
+}
+.service-block .service-title {
+  display: inline-block;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+.service-block .read-more {
+  display: inline-block;
+  margin: 5px 0 0 0;
+}
+
 .team-block {
   background-color: #FFFFFF;
   margin: 0 0 20px 0;
@@ -2114,6 +2135,20 @@ object {
   .ind-cols {
     -webkit-columns: 2;
     columns: 2;
+  }
+
+  .services .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .service-block {
+    width: 48%;
   }
 
   .team-members .flexxed {
@@ -2654,6 +2689,11 @@ object {
     padding: 0 30px;
   }
 
+  .service-block {
+    margin: 0 0 20px 0;
+    width: 31%;
+  }
+
   .team-block .team-contact-block {
     margin: 10px 100px 0 100px;
   }
@@ -2745,6 +2785,11 @@ object {
     height: 100%;
     max-width: none;
     width: 100%;
+  }
+
+  .service-block {
+    margin: 0 0 30px 0;
+    width: 22.5%;
   }
 
   .team-block .team-contact-block {

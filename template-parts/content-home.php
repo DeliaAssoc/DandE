@@ -74,24 +74,24 @@
     <section class="possibilities p60">
         <div class="constrain">
             <div class="subtitle noline">
-                <?php the_field( 'possibilities_subtitle' ); ?>
+                <?php the_field( 'possibilities_subtitle', 'options' ); ?>
             </div>
             <div class="full">
-                <?php the_field( 'possibilities_content' ); ?>
+                <?php the_field( 'possibilities_content', 'options' ); ?>
             </div>
             <div class="pos-items flexxed">
-                <?php if ( have_rows( 'possibilities_items' ) ) : ?>
-                    <?php $pCount = count( get_field( 'possibilities_items' ) ); ?>
-                    <?php while ( have_rows( 'possibilities_items' ) ) : the_row(); ?>
+                <?php if ( have_rows( 'possibilities_items', 'options' ) ) : ?>
+                    <?php $pCount = count( get_field( 'possibilities_items', 'options' ) ); ?>
+                    <?php while ( have_rows( 'possibilities_items', 'options' ) ) : the_row(); ?>
                         <div class="pos-item pitems-<?php echo $pCount; ?>">
-                            <?php $pImage = get_sub_field( 'item_icon' ); ?>
+                            <?php $pImage = get_sub_field( 'possibility_item_icon', 'options' ); ?>
                             <div class="pos-icon">
                                 <img src="<?php echo $pImage[ 'url' ]; ?>" alt="<?php echo $pImage[ 'alt' ]; ?>">
                             </div>
                             <div class="pos-text">
-                                <?php the_sub_field( 'item_content' ); ?>
+                                <?php the_sub_field( 'possibility_item_content', 'options' ); ?>
                             </div>
-                            <a class="pos-link" href="<?php the_sub_field( 'item_link' ); ?>">Read More +</a>
+                            <a class="pos-link" href="<?php the_sub_field( 'possibility_item_link', 'options' ); ?>">Read More +</a>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>

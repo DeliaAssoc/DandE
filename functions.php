@@ -181,6 +181,16 @@ show_admin_bar(false);
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
+		'page_title' 	=> 'Possibilities Section Options',
+		'menu_title'	=> 'Possibilities Section Options',
+		'menu_slug' 	=> 'possibilities-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-star-filled',
+		'position'		=> 5
+	));
+
+	acf_add_options_page(array(
 		'page_title' 	=> 'Recent Posts Options',
 		'menu_title'	=> 'Recent Posts Options',
 		'menu_slug' 	=> 'recent-posts-slider-settings',
