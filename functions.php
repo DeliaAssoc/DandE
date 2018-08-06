@@ -181,53 +181,63 @@ show_admin_bar(false);
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Possibilities Section Options',
-		'menu_title'	=> 'Possibilities Section Options',
-		'menu_slug' 	=> 'possibilities-settings',
+		'page_title' 	=> 'Modules Options',
+		'menu_title'	=> 'Modules Options',
+		'menu_slug' 	=> 'modules-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false,
 		'icon_url'		=> 'dashicons-star-filled',
 		'position'		=> 5
 	));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Recent Posts Options',
-		'menu_title'	=> 'Recent Posts Options',
-		'menu_slug' 	=> 'recent-posts-slider-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-admin-post',
-		'position'		=> 5
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Possibilities Section Options',
+	// 	'menu_title'	=> 'Possibilities Section Options',
+	// 	'menu_slug' 	=> 'possibilities-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-star-filled',
+	// 	'position'		=> 5
+	// ));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Contact Section Module',
-		'menu_title'	=> 'Contact Section Module',
-		'menu_slug' 	=> 'contact-section-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-email-alt',
-		'position'		=> 15
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Recent Posts Options',
+	// 	'menu_title'	=> 'Recent Posts Options',
+	// 	'menu_slug' 	=> 'recent-posts-slider-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-admin-post',
+	// 	'position'		=> 5
+	// ));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Client Slider Options',
-		'menu_title'	=> 'Client Slider Options',
-		'menu_slug' 	=> 'client-slider-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-id',
-		'position'		=> 6
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Contact Section Module',
+	// 	'menu_title'	=> 'Contact Section Module',
+	// 	'menu_slug' 	=> 'contact-section-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-email-alt',
+	// 	'position'		=> 15
+	// ));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Testimonials Slider Options',
-		'menu_title'	=> 'Testimonials Slider Options',
-		'menu_slug' 	=> 'testimonials-slider-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-testimonial',
-		'position'		=> 8
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Client Slider Options',
+	// 	'menu_title'	=> 'Client Slider Options',
+	// 	'menu_slug' 	=> 'client-slider-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-id',
+	// 	'position'		=> 6
+	// ));
+
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Testimonials Slider Options',
+	// 	'menu_title'	=> 'Testimonials Slider Options',
+	// 	'menu_slug' 	=> 'testimonials-slider-settings',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-testimonial',
+	// 	'position'		=> 8
+	// ));
 
 }
