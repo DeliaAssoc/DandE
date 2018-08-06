@@ -12,11 +12,11 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-	<section class="breadcrumbs">
-        <div class="constrain">
-			<?php bcn_display(); ?>
-        </div>
-    </section>
+		<section class="breadcrumbs">
+			<div class="constrain">
+				<?php bcn_display(); ?>
+			</div>
+		</section>
 		<main id="main" class="site-main">
 
 		<?php
