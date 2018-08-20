@@ -141,6 +141,26 @@ ol.bennies > li:before {
 	z-index: 50;
 }
 
+.advantage {
+	margin: 35px 0 0 0;
+
+	ol.bennies {
+		
+		a {
+			display: inline-block;
+			margin: 10px 0;
+		}
+
+		li {
+			margin: 0 0 20px 0;
+		}
+
+		> li:before {
+			color: rgba( $ltblue, 0.65 );
+		}
+	}
+}
+
 .bennies {
 	position: relative;
 
@@ -245,9 +265,7 @@ ol.bennies > li:before {
 	text-align: center;
 
 	.technology-thumbnail {
-		background-color: $ltblue;
 		display: inline-block;
-		height: 150px;
 		width: 100%;
 	}
 
@@ -335,6 +353,7 @@ ol.bennies > li:before {
 		display: inline-block;
 		height: 175px;
 		margin: 0 0 15px 0;
+		overflow: hidden;
 		width: 175px;
 	}
 
@@ -494,6 +513,30 @@ ol.bennies > li:before {
 
 		&:last-of-type {
 			margin: 0;
+		}
+	}
+}
+
+.single-post {
+
+	.wp-post-image {
+		display: block;
+		margin: 0 auto 30px auto;
+	}
+
+	.post-meta {
+		color: $ltblue;
+		margin: 0 0 10px 0;
+	}
+
+	.share-this {
+		border-bottom: 2px solid $ltblue;
+		border-top: 2px solid $ltblue;
+		font-weight: 700;
+		padding: 5px 0 7px 0;
+
+		i {
+			margin: 0 0 0 5px;
 		}
 	}
 }

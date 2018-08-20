@@ -14,7 +14,7 @@
 	<div class="modal-video">
 		<div class="constrain">
             <div class="responsive">
-                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
 		</div>
 	</div>
@@ -105,8 +105,8 @@
         <section class="cta-module p60">
             <div class="constrain">
                 <div class="flexxed">
-                    <a href="#" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
-                    <a href="#" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
+                    <a href="/services" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
+                    <a href="/tech" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
                     <a href="/contact" class="btn btn-lg blue-bg"><i class="fa fa-paper-plane"></i> Contact Us</a>
                 </div>
             </div>

@@ -72,7 +72,6 @@
 
 				<div class="uh-right">
 					<?php social_media_list(); ?>
-					<a href="/wp-admin" class="login">Login <i class="fa fa-caret-down" aria-hidden="true"></i></a>
 				</div>
 
 			</div>

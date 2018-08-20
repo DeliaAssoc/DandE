@@ -21,7 +21,8 @@
                 </div>
             </div>
             <div class="intro-content-image">
-                <?php the_post_thumbnail(); ?>
+               <?php $iImage = get_field( 'intro_content_image' ); ?>
+               <img src="<?php echo $iImage[ 'url' ]; ?>" alt="<?php echo $iImage[ 'alt' ]; ?>">
             </div>
         </div>
     </section>
@@ -58,6 +59,19 @@
                         </div>
                     </div>
                 </section>
+
+            <?php elseif ( get_row_layout() == 'half_and_half' ) : ?>
+                <section class="flex-content half-half p60  <?php the_sub_field( 'section_color' ); ?>">
+                    <div class="constrain flexxed">
+                        <div class="half-content">
+                            <?php the_sub_field( 'left_half' ); ?>
+                        </div>
+                        <div class="half-content">
+                            <?php the_sub_field( 'right_half' ); ?>
+                        </div>
+                    </div>
+                </section>  
+
             <?php endif; ?>
 
         <?php endwhile; ?>
@@ -68,8 +82,8 @@
         <section class="cta-module p60">
             <div class="constrain">
                 <div class="flexxed">
-                    <a href="#" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
-                    <a href="#" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
+                    <a href="/services" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
+                    <a href="/tech" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
                     <a href="/contact" class="btn btn-lg blue-bg"><i class="fa fa-paper-plane"></i> Contact Us</a>
                 </div>
             </div>

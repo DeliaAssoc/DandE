@@ -14,7 +14,7 @@
 	<div class="modal-video">
 		<div class="constrain">
             <div class="responsive">
-                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
 		</div>
 	</div>
@@ -38,12 +38,63 @@
         </div>
     </section>
 
+    <?php if ( have_rows( 'content_sections' ) ) : ?>
+
+        <?php while ( have_rows( 'content_sections' ) ) : the_row(); ?>
+
+            <?php if ( get_row_layout() == 'content_with_image' ) : ?>
+
+                <section class="flex-content cont-w-image p60 <?php the_sub_field( 'section_color' ); ?>">
+                    <div class="constrain">
+                        <div class="flexxed">
+                            <div class="cwi-image">
+                                <?php $image = get_sub_field( 'section_image' ); ?>
+                                <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
+                            </div>
+                            <div class="cwi-content">
+                                <h2><?php the_sub_field( 'section_heading' ); ?></h2>
+                                <div class="cwi-text">
+                                    <?php the_sub_field( 'section_content' ); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            <?php elseif ( get_row_layout() == 'full_width' ) : ?>
+                <section class="flex-content full-width p60 <?php the_sub_field( 'section_color' ); ?>">
+                    <div class="constrain">
+                        <h2><?php the_sub_field( 'section_heading' ); ?></h2>
+                        <div class="fw-content">
+                            <?php the_sub_field( 'section_content' ); ?>
+                        </div>
+                    </div>
+                </section>
+
+            <?php elseif ( get_row_layout() == 'half_and_half' ) : ?>
+            <section class="flex-content half-half p60  <?php the_sub_field( 'section_color' ); ?>">
+                <div class="constrain flexxed">
+                    <div class="half-content">
+                        <?php the_sub_field( 'left_half' ); ?>
+                    </div>
+                    <div class="half-content">
+                        <?php the_sub_field( 'right_half' ); ?>
+                    </div>
+                </div>
+            </section>  
+
+            <?php endif; ?>
+
+        <?php endwhile; ?>
+
+    <?php endif; ?>
+
     <?php if ( get_field( 'cta_section_option' ) == 'yes' ) : ?>
         <section class="cta-module p60">
             <div class="constrain">
                 <div class="flexxed">
-                    <a href="#" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
-                    <a href="#" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
+                    <a href="/services" class="btn btn-lg blue-bg">D+E Services <span class="green-txt">+</span></a>
+                    <a href="/tech" class="btn btn-lg blue-bg">D+E Technologies <span class="green-txt">+</span></a>
                     <a href="/contact" class="btn btn-lg blue-bg"><i class="fa fa-paper-plane"></i> Contact Us</a>
                 </div>
             </div>

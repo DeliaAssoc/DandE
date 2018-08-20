@@ -59,7 +59,10 @@ $( document ).ready( function() {
 
 	// DEFAULT PAGE SLIDER
 	$( '.hero-slider' ).slick({
-		arrows: false
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		speed: 750
 	});
 
 	// CLIENT MODULE SLIDER

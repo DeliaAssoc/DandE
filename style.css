@@ -548,6 +548,10 @@ a.white-brdr {
   color: #FFFFFF;
 }
 
+.ltblue-text {
+  color: #29b8e9;
+}
+
 .dkgray-text {
   color: #6d6f71;
 }
@@ -602,7 +606,8 @@ a.white-brdr {
 }
 
 .technology h1,
-.service h1 {
+.service h1,
+.blog h1 {
   color: #243e74;
   font-size: 30px;
   font-weight: 900;
@@ -631,6 +636,10 @@ a.white-brdr {
 
 .client-slide img {
   margin: 0 auto;
+}
+
+.site-content .testimonial-slider-module ul li:before {
+  content: '';
 }
 
 .testimonial-slider-module {
@@ -1649,6 +1658,20 @@ ol.bennies > li:before {
   z-index: 50;
 }
 
+.advantage {
+  margin: 35px 0 0 0;
+}
+.advantage ol.bennies a {
+  display: inline-block;
+  margin: 10px 0;
+}
+.advantage ol.bennies li {
+  margin: 0 0 20px 0;
+}
+.advantage ol.bennies > li:before {
+  color: rgba(41, 184, 233, 0.65);
+}
+
 .bennies {
   position: relative;
 }
@@ -1739,9 +1762,7 @@ ol.bennies > li:before {
   text-align: center;
 }
 .technology-block .technology-thumbnail {
-  background-color: #29b8e9;
   display: inline-block;
-  height: 150px;
   width: 100%;
 }
 .technology-block .technology-title {
@@ -1825,6 +1846,7 @@ ol.bennies > li:before {
   display: inline-block;
   height: 175px;
   margin: 0 0 15px 0;
+  overflow: hidden;
   width: 175px;
 }
 .team-block .team-contact-block {
@@ -1960,6 +1982,24 @@ ol.bennies > li:before {
 }
 .module .mc-item:last-of-type {
   margin: 0;
+}
+
+.single-post .wp-post-image {
+  display: block;
+  margin: 0 auto 30px auto;
+}
+.single-post .post-meta {
+  color: #29b8e9;
+  margin: 0 0 10px 0;
+}
+.single-post .share-this {
+  border-bottom: 2px solid #29b8e9;
+  border-top: 2px solid #29b8e9;
+  font-weight: 700;
+  padding: 5px 0 7px 0;
+}
+.single-post .share-this i {
+  margin: 0 0 0 5px;
 }
 
 /*--------------------------------------------------------------
@@ -2206,6 +2246,10 @@ object {
     margin: 0 0 45px 0;
   }
 
+  .advantage ol.bennies {
+    margin: 0 75px;
+  }
+
   .recent-blogs .post-block {
     margin: 0 0 30px 0;
   }
@@ -2227,6 +2271,10 @@ object {
 
   .service-block {
     width: 48%;
+  }
+
+  .cont-w-image .cwi-image {
+    text-align: center;
   }
 
   .technologies .flexxed {
@@ -2323,6 +2371,8 @@ object {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2389,7 +2439,7 @@ object {
     width: 48%;
   }
   .secondary-intro-content .intro-content-image img {
-    height: 100%;
+    height: auto;
     left: 50%;
     position: absolute;
     top: 50%;
@@ -2513,6 +2563,9 @@ object {
   }
 
   .cont-w-image .flexxed {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -2525,6 +2578,23 @@ object {
     width: 48%;
   }
   .cont-w-image .cwi-content {
+    width: 48%;
+  }
+
+  .half-half .flexxed {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .half-content {
     width: 48%;
   }
 
@@ -2821,6 +2891,10 @@ object {
     width: 31%;
   }
 
+  .cont-w-image .col-2 {
+    columns: 2;
+  }
+
   .team-block .team-contact-block {
     margin: 10px 100px 0 100px;
   }
@@ -2927,6 +3001,10 @@ object {
     height: 100%;
     max-width: none;
     width: 100%;
+  }
+
+  .advantage ol.bennies {
+    margin: 0 110px;
   }
 
   .service-block {
