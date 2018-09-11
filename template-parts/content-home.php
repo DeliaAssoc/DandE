@@ -7,14 +7,15 @@
  * @package D_and_E_Consulting
  */
 
-?>
+ ?>
+
 <?php if ( get_field( 'video_url' ) ) : ?>
 <div class="modal-video-window">
 	<span class="close">&times;</span>
 	<div class="modal-video">
 		<div class="constrain">
             <div class="responsive">
-                <iframe width="700" height="394" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="768" height="432" src="<?php the_field( 'video_url' ); ?>" frameborder="0" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
 		</div>
 	</div>
@@ -228,6 +229,7 @@
                         'numberposts'            => $count,
                         'order'                  => 'DESC',
                         'orderby'                => 'title',
+                        'posts_per_page'         => '2'
                     );
 
                     // The Query

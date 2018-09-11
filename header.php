@@ -57,7 +57,7 @@
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'theme_company_street' ) ) :?>
 						<div class="contact-link address">
-							<?php echo get_theme_mod( 'theme_company_street' ); ?>, <?php echo get_theme_mod( 'theme_company_state' ); ?>
+							<?php echo get_theme_mod( 'theme_company_street' ); ?> &bull; <?php echo get_theme_mod( 'theme_company_city' ); ?>, <?php echo get_theme_mod( 'theme_company_state' ); ?>
 						</div>
 					<?php endif; ?>	
 					<?php if ( get_theme_mod( 'theme_company_email' ) ) :?>
@@ -72,7 +72,6 @@
 
 				<div class="uh-right">
 					<?php social_media_list(); ?>
-					<a href="/wp-admin" class="login">Login <i class="fa fa-caret-down" aria-hidden="true"></i></a>
 				</div>
 
 			</div>

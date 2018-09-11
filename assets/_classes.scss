@@ -179,6 +179,10 @@ a.white-brdr {
 	}
 }
 
+.ltblue-text {
+	color: $ltblue;
+}
+
 .dkgray-text {
 	color: $dkgray;
 }
@@ -238,7 +242,8 @@ a.white-brdr {
 }
 
 .technology,
-.service {
+.service,
+.blog {
 
 	h1 {
 		color: $blue;
@@ -281,6 +286,16 @@ a.white-brdr {
 }
 
 // TESTIMONIALS SLIDER MODULE
+.site-content {
+
+	.testimonial-slider-module {
+
+		ul li:before {
+			content: '';
+		}
+	}
+}
+
 .testimonial-slider-module {
 	background-position: center center;
 	background-size: cover;
@@ -494,4 +509,12 @@ a.white-brdr {
     right: 0;
     text-align: center;
     top: 130px;
+}
+
+.sched-training {
+
+	input,
+	textarea {
+		background-color: #e9e9e9;
+	}
 }

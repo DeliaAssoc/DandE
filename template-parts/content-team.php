@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <section class="secondary-intro-content p60">
+    <section class="secondary-intro-content">
         <div class="constrain">
             <div class="intro-content-text full">
                 <h1 class="subtitle"><?php the_title(); ?></h1>
@@ -22,7 +22,7 @@
         </div>
     </section>
 
-    <section class="team-members p30">
+    <section class="team-members">
         <div class="constrain">
             <div class="flexxed">
             <?php
@@ -62,7 +62,7 @@
                                     </div>
                                     <?php if ( get_field( 'mobile_phone_number' ) ) : ?>
                                     <div class="contact-item team-mobile">
-                                        <i class="fa fa-phone" aria-hidden="true"></i> <?php the_field( 'mobile_phone_number' ); ?>
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> <?php the_field( 'mobile_phone_number' ); ?>
                                     </div>
                                     <div class="contact-item team-email">
                                         <a href="mailto:<?php the_field( 'email_address' ); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <?php the_field( 'email_address' ); ?></a>

@@ -33,6 +33,13 @@
         margin: 0 0 45px 0;
     }
 
+    .advantage {
+
+        ol.bennies {
+            margin: 0 75px;
+        }
+    }
+
     .recent-blogs {
 
         .post-block {
@@ -62,6 +69,14 @@
 
     .service-block {
         width: 48%;
+    }
+
+    // FLEXIBLE
+    .cont-w-image {
+
+        .cwi-image {
+            text-align: center;
+        }
     }
 
     // TECHNOLOGIES
@@ -166,6 +181,12 @@
         }
     }
 
+    .sched-training {
+        -webkit-column-count: 2;
+                column-count: 2;
+        max-height: 340px;
+    }
+
     // TYPOGRAPHY
     h2 {
        font-size: 30px; 
@@ -196,6 +217,8 @@
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
         }
 
         .posts-2 {
@@ -275,7 +298,7 @@
             width: 48%;
 
             img {
-                height: 100%;
+                height: auto;
                 left: 50%;
                 position: absolute;
                 top: 50%;
@@ -437,10 +460,13 @@
         }
     }
     
-    // TECHNOLOGY
+    // FLEXIBLE
     .cont-w-image {
 
         .flexxed {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
                 -ms-flex-direction: row;
@@ -457,6 +483,26 @@
         .cwi-content {
             width: 48%;
         }
+    }
+
+    .half-half {
+
+        .flexxed {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .half-content {
+        width: 48%;
     }
 
     // TESTIMONIALS
@@ -631,8 +677,18 @@
 
     .upper-header {
         display: block;
-        font-size: 15px;
+        font-size: 12px;
         padding: 10px 0;
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
     }
 
     .uh-left {
@@ -646,10 +702,12 @@
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+        width: 90%;
     }
 
     .uh-right {
         text-align: center;
+        width: 10%;
 
         a {
             margin: 0 3px;
@@ -720,20 +778,7 @@
 
     // HEADER
     .upper-header {
-
-        .flexxed {
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                    justify-content: space-between;
-        }
-    }
-
-    .uh-left {
-        width: 82%;
+        font-size: 13px;
     }
 
     .uh-right {
@@ -832,7 +877,7 @@
         width: 31%;
     }
 
-    // TECHNOLOGY
+    // FLEXIBLE
     .cont-w-image {
 
         .cwi-image {
@@ -848,6 +893,13 @@
     .technology-block {
         margin: 0 0 20px 0;
         width: 31%;
+    }
+
+    .cont-w-image {
+
+        .col-2 {
+            columns: 2;
+        }
     }
 
     // TEAM
@@ -889,8 +941,12 @@
     }
 
     // HEADER
+    .upper-header {
+        font-size: 14px;
+    }
+
     .uh-left {
-        width: 80%;
+        width: 90%;
     }
 
     // HOMEPAGE
@@ -912,7 +968,7 @@
                 columns: 4;
     }
 
-    // TECHNOLOGY
+    // FLEXIBLE
     .cont-w-image {
 
         .cols-2 {
@@ -981,8 +1037,12 @@
     }
 
     // HEADER
+    .upper-header {
+        font-size: 15px;
+    }
+
     .uh-left {
-        width: 70%;
+        width: 85%;
     }
 
     // HOMEPAGE
@@ -995,6 +1055,13 @@
                 max-width: none;
                 width: 100%;
             }
+        }
+    }
+
+    .advantage {
+
+        ol.bennies {
+            margin: 0 110px;
         }
     }
 

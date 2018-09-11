@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying cases.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <section class="secondary-intro-content p60">
@@ -26,54 +25,64 @@
         </div>
     </section>
 
-    <?php if ( have_rows( 'content_sections' ) ) : ?>
-
-        <?php while ( have_rows( 'content_sections' ) ) : the_row(); ?>
-
-            <?php if ( get_row_layout() == 'content_with_image' ) : ?>
-
-                <section class="flex-content cont-w-image p60 <?php the_sub_field( 'section_color' ); ?>">
-                    <div class="constrain">
-                        <div class="flexxed">
-                            <div class="cwi-image">
-                                <?php $image = get_sub_field( 'section_image' ); ?>
-                                <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo $image[ 'alt' ]; ?>">
+    <?php if ( have_rows( 'case_studies' ) ) : ?>
+        <section class="case-studies">
+            <div class="constrain">
+                <div class="flexxed">
+                    <?php while ( have_rows( 'case_studies' ) ) : the_row(); ?>
+                        <div class="case-study-block">
+                            <div class="cs-image">
+                                <?php $cImage = get_sub_field( 'case_study_image' ); ?>
+                                <img src="<?php echo $cImage[ 'url' ]; ?>" alt="<?php echo $cImage[ 'alt' ]; ?>">
                             </div>
-                            <div class="cwi-content">
-                                <h2><?php the_sub_field( 'section_heading' ); ?></h2>
-                                <div class="cwi-text">
-                                    <?php the_sub_field( 'section_content' ); ?>
-                                </div>
+                            <div class="cs-text">
+                                <?php the_sub_field( 'case_study_snippet' ); ?>
                             </div>
+                            <a target="_blank" href="<?php the_sub_field( 'case_study_url' ); ?>" class="btn-md ltblue-bg"></a>
                         </div>
-                    </div>
-                </section>
-
-            <?php elseif ( get_row_layout() == 'full_width' ) : ?>
-                <section class="flex-content full-width p60 <?php the_sub_field( 'section_color' ); ?>">
-                    <div class="constrain">
-                        <h2><?php the_sub_field( 'section_heading' ); ?></h2>
-                        <div class="fw-content">
-                            <?php the_sub_field( 'section_content' ); ?>
-                        </div>
-                    </div>
-                </section>
-
-            <?php elseif ( get_row_layout() == 'half_and_half' ) : ?>
-            <section class="flex-content half-half p60  <?php the_sub_field( 'section_color' ); ?>">
-                <div class="constrain flexxed">
-                    <div class="half-content">
-                        <?php the_sub_field( 'left_half' ); ?>
-                    </div>
-                    <div class="half-content">
-                        <?php the_sub_field( 'right_half' ); ?>
-                    </div>
+                    <?php endwhile; ?>
                 </div>
-            </section>  
+            </div>
+        </section>
+    <?php endif; ?>
 
-            <?php endif; ?>
+    <?php if ( have_rows( 'solutions_&_services' ) ) : ?>
+        <section class="about-solutions p30 blue-bg">
+            <div class="constrain">
+                <h2><?php the_field( 'solutions_&_services_title' ); ?></h2>
+                <div class="flexxed">
+                    <?php while ( have_rows( 'solutions_&_services' ) ) : the_row(); ?>
 
-        <?php endwhile; ?>
+                        <div class="ss-block">
+                            <?php $sIcon = get_sub_field( 'icon' ); ?>
+                            <div class="ss-image">
+                                <img src="<?php echo $sIcon[ 'url' ]; ?>" alt="<?php echo $sIcon[ 'alt' ]; ?>">
+                            </div>
+                            <div class="ss-title"><?php the_sub_field( 'solution_service' ); ?></div>
+                        </div>
+
+                    <?php endwhile; ?>
+                </div>
+                <a class="btn btn-lg green-bg" href="<?php the_field( 'solutions_services_cta_link_url' ); ?>" class="href"><?php the_field( 'solutions_services_cta_link_text' ); ?></a>
+            </div>
+        </section>
+
+    <?php endif; ?>
+
+    <?php if ( have_rows( 'industries' ) ) : ?>
+        <section class="about-industries p30">
+            <div class="constrain">
+                <h2><?php the_field( 'industries_title' ); ?></h2>
+                <div class="ind-cols">
+                    <?php while( have_rows( 'industries' ) ) : the_row(); ?>
+                        <div class="industry">
+                            <?php the_sub_field( 'industry' ); ?>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+                <a class="btn btn-lg ltblue-bg" href="<?php the_field( 'industries_cta_link_url' ); ?>" class="href"><?php the_field( 'industries_cta_link_text' ); ?></a>
+            </div>
+        </section>
 
     <?php endif; ?>
 
