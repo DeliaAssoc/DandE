@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // STICKY FOOTER
 .site {
 	display: -webkit-box;
@@ -517,4 +518,517 @@ a.white-brdr {
 	textarea {
 		background-color: #e9e9e9;
 	}
+=======
+// STICKY FOOTER
+.site {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.site-content {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.constrain {
+	display: block;
+	padding: 0 10px;
+	max-width: 1200px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.flexxed {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+}
+
+section {
+	overflow: hidden;
+}
+
+.p30 {
+	padding: 10px 0;
+}
+
+.p60 {
+	padding: 20px 0;
+}
+
+a.btn-sm, a.btn-md, a.btn-lg {
+	color: $blue;
+	display: inline-block;
+
+	&.white-bg {
+		border: 2px solid $lightest;
+
+		&:hover {
+			background-color: $ltblue;
+			border: 2px solid $ltblue;
+			color: $lightest;
+		}
+	}
+
+	&.green-bg {
+		color: $lightest;
+		border: 2px solid $green;
+	}
+
+	&.blue-bg {
+		color: $lightest;
+		border: 2px solid $blue;
+
+		&:hover {
+			background-color: $lightest;
+			border: 2px solid $lightest;
+			color: $green;
+		}
+	}
+
+	&.ltblue-bg {
+		color: $lightest;
+		border: 2px solid $ltblue;
+
+		&:hover {
+			background-color: $blue;
+			border: 2px solid $blue;
+			color: $lightest;
+		}
+	}
+}
+
+.btn-sm {
+	padding: 7px 10px;
+}
+
+.btn-md {
+	padding: 10px 20px;
+}
+
+.btn-lg {
+	padding: 15px 30px;
+}
+
+.white-bg {
+	background-color: $lightest;
+}
+
+a.white-brdr {
+	color: $lightest;
+	border: 2px solid $lightest;
+}
+
+.green-bg {
+	background-color: $green;
+}
+
+.module.green-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.green-brdr {
+	border: 2px solid $green;
+}
+
+.blue-bg {
+	background-color: $blue;
+}
+
+.module.blue-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.blue-brdr {
+	border: 2px solid $blue;
+}
+
+.ltblue-bg {
+	background-color: $ltblue;
+}
+
+.module.ltblue-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.ltblue-brdr {
+	border: 2px solid $ltblue;
+}
+
+.ltgray-bg {
+	background-color: #ebebeb;
+}
+
+.ltgray-brdr {
+	border: 2px solid #ebebeb;
+}
+
+.dkgray-bg {
+	background-color: $dkgray;
+}
+
+.module.dkgray-bg {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.ltblue-text {
+	color: $ltblue;
+}
+
+.dkgray-text {
+	color: $dkgray;
+}
+
+.green-txt {
+	color: $green;
+}
+
+.subtitle {
+	color: $ltblue;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 47px;
+	position: relative;
+	text-transform: uppercase;
+
+	&.noline {
+		padding: 0;
+
+		&:before {
+			background-color: transparent;
+			content: '';
+			display: inline-block;
+			height: 0;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 40px;
+		}
+	}
+
+	&.white {
+		color: $lightest;
+
+		&:before {
+			background-color: $lightest;
+		}
+	}
+
+	&:before {
+		background-color: $ltblue;
+		content: '';
+		display: inline-block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+	}
+}
+
+.full-width {
+	text-align: center;
+}
+
+.technology,
+.service,
+.blog {
+
+	h1 {
+		color: $blue;
+		font-size: 30px;
+		font-weight: 900;
+	}
+}
+
+// CTA MODULE
+.cta-module {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/cta-module-bg-image.jpg' );
+	background-position: center center;
+	background-repeat: repeat;
+	color: $lightest;
+
+	a.btn {
+		margin: 0 0 10px 0;
+		text-align: center;
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+
+	.fa {
+		color: $green;
+	}
+}
+
+// CLIENT SLIDER MODULE
+.client-slider-module {
+	text-align: center;
+}
+
+.client-slide {
+	
+	img {
+		margin: 0 auto;
+	}
+}
+
+// TESTIMONIALS SLIDER MODULE
+.site-content {
+
+	.testimonial-slider-module {
+
+		ul li:before {
+			content: '';
+		}
+	}
+}
+
+.testimonial-slider-module {
+	background-position: center center;
+	background-size: cover;
+	color: $lightest;
+	text-align: center;
+
+	h2 {
+		color: $lightest;
+	}
+
+	.slick-dots li.slick-active button {
+
+
+		&:before {
+			content: '\f111';
+			color: $lightest;
+			font-family: 'fontAwesome';
+		}
+	}
+
+	.slick-dots {
+		bottom: -30px;
+	}
+
+	.slick-dots li {
+		margin: 0;
+
+		button {
+
+			&:before {
+				content: '\f111';
+				color: $lightest;
+				font-family: $fa5;
+				font-size: 12px;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.tslide-content {
+	display: block;
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.testimonial-name {
+	margin: 30px 0 0 0;
+}
+
+// RECENT BLOGS MODULE
+.recent-blogs {
+
+	.full {
+		margin: 0 0 20px 0;
+	}
+
+	.post-block {
+		margin: 0 0 20px 0;
+	}
+
+	h4 {
+		font-weight: 700;
+	}
+
+	.post-date {
+		color: $ltblue;
+		font-size: 14px;
+		margin: 0 0 10px 0;
+		text-transform: uppercase;
+	}
+
+	.post-link {
+		color: $ltblue;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 500;
+		margin: 10px 0 0 0;
+		text-transform: uppercase;
+	}
+}
+
+// CONTACT SECTION MODULE
+.contact-module {
+
+	.left-half {
+		background-color: $blue;
+		color: $lightest;
+
+		h2 {
+			color: $lightest;
+		}
+	}
+
+	.right-half {
+		background-position: center center;
+		background-size: cover;
+		color: $blue;
+
+		a {
+			color: $ltblue;
+			font-size: 32px;
+			font-weight: 500;
+		}
+	}
+
+	input[ type=submit ] {
+		color: $blue;
+		padding: 15px 25px;
+		text-transform: uppercase;
+	}
+}
+
+.blue-form {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea,
+	select {
+		background-color: $blue;
+		border-bottom: 2px solid $ltblue;
+		color: $lightest;
+		font-weight: 500;
+		margin: 0 0 10px 0;
+		padding: 5px 0 5px 3px;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $lightest;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $lightest;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+			color: $lightest;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $lightest;
+		}
+	}
+
+	textarea {
+		max-height: 100px;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="number"]:focus,
+	input[type="tel"]:focus,
+	input[type="range"]:focus,
+	input[type="date"]:focus,
+	input[type="month"]:focus,
+	input[type="week"]:focus,
+	input[type="time"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="color"]:focus,
+	textarea:focus {
+		background-color: #30539b !important;
+		color: $lightest;
+		outline: 0;
+	}
+	
+}
+
+.modal-video-window {
+    background-color: rgba( 0, 0, 0, 0.75 );
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+
+    .close {
+        color: rgba( $lightest, 0.75 );
+        cursor: pointer;
+        display: block;
+        font-size: 60px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 40px;
+        width: 50px;
+    }
+}
+
+.modal-video {
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    max-width: 500px;
+    right: 0;
+    text-align: center;
+    top: 130px;
+>>>>>>> b1d6d8abda69102bcc3eff1ad065ce7069e697bf
 }

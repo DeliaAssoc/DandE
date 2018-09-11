@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*--------------------------------------------------------------
 # Content
@@ -678,4 +679,681 @@ object {
 
 .gallery-caption {
 	display: block;
+=======
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+// HOMEPAGE
+.hero-slider {
+	background-color: #ebebeb;
+
+	.slide {
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.slide {
+	background-color: #ebebeb;
+	text-align: center;
+}
+
+.slide-content {
+	color: $blue;
+	padding: 10px 0;
+}
+
+.slide-btns {
+	max-width: 350px;
+	margin: 0 auto;
+	text-transform: uppercase;
+
+	.fa {
+		color: $green;
+	}
+}
+
+.intro-content {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/main-content-background-image.png' );
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	.mcontent-block {
+		margin: 0 0 15px 0;
+	}
+}
+
+.possibilities {
+	background-color: #ebebeb;
+	text-align: center;
+
+	.full {
+		margin: 0 auto 15px auto;
+		max-width: 900px;
+	}
+}
+
+.pos-item {
+	margin: 0 0 30px 0;
+	position: relative;
+	z-index: 50;
+
+	&:after {
+		background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/Plus-Icon.png' );
+		background-position: center center;
+		background-repeat: no-repeat;
+		bottom: -40px;
+		content: '';
+		display: block;
+		height: 90px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		width: 90px;
+		z-index: -1;
+	}
+
+	&:last-of-type {
+		margin: 0;
+
+		&:after {
+			background-image: none;
+		}
+	}
+}
+
+.pos-icon {
+    background-color: $lightest;
+    border-radius: 100%;
+    height: 110px;
+    margin: 0 auto 15px auto;
+    padding: 29px;
+    width: 110px;
+}
+
+.pos-text {
+	margin: 0 0 10px 0;
+}
+
+.pos-link {
+	color: $dkgray;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.benefits {
+	color: $lightest;
+
+	h2 {
+		color: $lightest;
+	}
+}
+
+.benefit-items {
+	margin: 15px 0 0 0;
+}
+
+ol.bennies {
+	counter-reset:li;
+	margin-left:0;
+	padding-left:0; /* Remove the default left padding */
+}
+
+ol.bennies > li {
+	position:relative; /* Create a positioning context */
+	list-style:none; /* Disable the normal item numbering */
+	margin: 0 0 15px 0;
+	z-index: 99;
+}
+
+ol.bennies > li:before {
+	content:counter(li, decimal-leading-zero); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	color: rgba( $blue, .35 );
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1em;
+	position:absolute;
+	top: -7px;
+	z-index: 50;
+}
+
+.advantage {
+	margin: 35px 0 0 0;
+
+	ol.bennies {
+		
+		a {
+			display: inline-block;
+			margin: 10px 0;
+		}
+
+		li {
+			margin: 0 0 20px 0;
+		}
+
+		> li:before {
+			color: rgba( $ltblue, 0.65 );
+		}
+	}
+}
+
+.bennies {
+	position: relative;
+
+	.title {
+		font-size: 20px;
+		font-weight: 900;
+		margin: 0 0 0 35px;
+		position: relative;
+		z-index: 100;
+	}
+}
+
+.secondary-intro-content {
+
+	.intro-content-text {
+		margin: 0 0 10px 0;
+	}
+}
+
+// ABOUT
+.see-how-about-btn {
+	display: inline-block;
+	margin: 30px 0 0;
+}
+
+.about-solutions {
+	background-image: url( 'http://localhost/dande/wp-content/themes/dae/img/solutions-tile-bg.png' );
+	background-size: cover;
+	color: $lightest;
+	text-align: center;
+
+	h2 {
+		color: $lightest;
+		margin: 0 0 20px 0;
+	}
+
+	.btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+.ss-block {
+	font-weight: 600;
+	margin: 0 0 20px 0;
+}
+
+.ss-image {
+	background-color: $ltblue;
+	border-radius: 50%;
+	display: inline-block;
+	height: 40px;
+	margin: 0 0 5px 0;
+	width: 40px;
+}
+
+.about-industries {
+	text-align: center;
+
+	h2 {
+		margin: 0 0 20px 0;
+	}
+
+	.btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+.industry {
+	color: $ltgray;
+	font-weight: 600;
+	margin: 0 0 5px 0;
+}
+
+// SERVICES
+.service-block {
+	margin: 0 0 15px 0;
+	text-align: center;
+
+	.service-thumbnail {
+		background-color: $ltblue;
+		display: inline-block;
+		height: 150px;
+		width: 100%;
+	}
+
+	.service-title {
+		display: inline-block;
+		font-weight: 700;
+		margin: 0 0 5px 0;
+		text-transform: uppercase;
+	}
+
+	.read-more {
+		display: inline-block;
+		margin: 5px 0 0 0;
+	}
+}
+
+// SERVICES
+.technology-block {
+	margin: 0 0 15px 0;
+	text-align: center;
+
+	.technology-thumbnail {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.technology-title {
+		display: inline-block;
+		font-weight: 700;
+		margin: 0 0 5px 0;
+		text-transform: uppercase;
+	}
+
+	.read-more {
+		display: inline-block;
+		margin: 5px 0 0 0;
+	}
+}
+
+// TEAM
+.team-block {
+	background-color: $lightest;
+	margin: 0 0 20px 0;
+	position: relative;
+
+	.team-bio-block {
+		background-color: #ebebeb;
+		border-bottom: 10px solid $green;
+		border-top: 10px solid $green;
+		-webkit-box-shadow: 0 0 7px 2px rgba(0,0,0,.15);
+		box-shadow: 0 0 7px 2px rgba(0,0,0,.15);
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		@include translow;
+		visibility: hidden;
+		width: 100%;
+
+		&.active {
+			opacity: 1;
+			@include translow;
+			visibility: visible;
+		}
+
+		p {
+			font-size: 13px;
+			margin: 0 0 10px 0;
+		}
+
+		.bio {
+			margin: 10px 0 0 0;
+		}
+	}
+
+	.team-main-info {
+		padding: 115px 0;
+		text-align: center;
+	}
+
+	h3 {
+		color: $darkest;
+		font-size: 22px;
+		font-weight: 900;
+		margin: 0 0 3px 0;
+	}
+
+	a.close-bio {
+		color: $ltblue;
+		font-size: 25px;
+		position: absolute;
+		right: 10px;
+		top: 3px;
+	}
+
+	.job-title {
+		color: $ltgray;
+		font-style: italic;
+		font-weight: 700;
+	}
+
+	.team-image {
+		background-color: $green;
+		border-radius: 50%;
+		display: inline-block;
+		height: 175px;
+		margin: 0 0 15px 0;
+		overflow: hidden;
+		width: 175px;
+	}
+
+	.team-contact-block {
+		border-top: 1px solid #ebebeb;
+		font-size: 14px;
+		font-weight: 900;
+		margin: 10px 0 0 0;
+		padding: 10px 0 0 0;
+		
+		.contact-item {
+			color: $darkest;
+			margin: 0 0 5px 0;
+
+			a {
+				color: $darkest;
+			}
+		}
+
+		.fa {
+			color: $green;
+		}
+
+		.team-linkedin {
+			background-color: $green;
+			display: inline-block;
+			height: 30px;
+			padding: 4px 0 0 0;
+			text-align: center;
+			width: 30px;
+		}
+
+		.fa.fa-linkedin {
+			color: $lightest;
+			font-size: 20px;
+		}
+	}
+
+	a.bio-btn {
+		margin: 20px 0 0 0;
+	}
+}
+
+// TESTIMONIALS
+.testimonial-block {
+	background-color: #ebebeb;
+	margin: 0 0 10px 0;
+	padding: 15px;
+	text-align: center;
+
+	.testimonial-name {
+		font-weight: 700;
+		margin: 20px 0 0 0;
+	}
+}
+
+.tblock-content {
+	margin: 0 auto;
+	max-width: 840px;
+}
+
+// CONTACT
+.contact-info-block {
+	border-bottom: 2px solid $ltblue;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+
+	&:last-of-type {
+		border: 0;
+	}
+
+	h4 {
+		color: $green;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+}
+
+.cp-contact-address {
+	margin: 0 0 10px 0;
+}
+
+.cp-contact-info {
+	color: $dkgray;
+	font-weight: 700;
+
+	.contact-item {
+		margin: 0 0 5px 0;
+	}
+
+	i {
+		color: $ltblue;
+		margin: 0 5px 0 0;
+	}
+
+	a {
+		color: $dkgray;
+		font-weight: 700;
+	}
+}
+
+.contact-page-form {
+
+	.form-subcontent {
+		margin: 0 0 20px 0;
+	}
+
+	input {
+		height: 44px;
+		margin: 0 0 20px 0;
+	}
+
+	input, textarea {
+		color: $blue;
+		background-color: #ddf1f8;
+		border: 1px solid #ebebeb;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: $blue;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+			color: $blue;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+			color: $blue;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+			color: $blue;
+		}
+
+		&:focus {
+			outline: 2px solid $ltblue;
+		}
+	}
+
+	input[type=submit] {
+		background-color: $ltblue;
+		color: $lightest;
+		font-weight: 700;
+		height: auto;
+		margin: 0;
+		padding: 20px 35px;
+		text-transform: uppercase;
+	}
+}
+
+// MODULES TEMPLATE
+.module {
+
+	.module-intro {
+		margin: 0 auto 30px auto;
+		max-width: 800px;
+	}
+
+	.mc-item {
+		margin: 0 0 10px 0;
+
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}
+
+.single-post {
+
+	.wp-post-image {
+		display: block;
+		margin: 0 auto 30px auto;
+	}
+
+	.post-meta {
+		color: $ltblue;
+		margin: 0 0 10px 0;
+	}
+
+	.share-this {
+		border-bottom: 2px solid $ltblue;
+		border-top: 2px solid $ltblue;
+		font-weight: 700;
+		padding: 5px 0 7px 0;
+
+		i {
+			margin: 0 0 0 5px;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+>>>>>>> b1d6d8abda69102bcc3eff1ad065ce7069e697bf
 }
